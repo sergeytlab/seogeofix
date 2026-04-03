@@ -3,238 +3,285 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Full SEO + GEO + AI Search Audit. We find what's blocking your rankings and show exactly how to fix it. Results in 48 hours.">
-<meta property="og:title" content="SeoGeoFix — Rank Higher in Google & AI Search">
-<meta property="og:description" content="Fix technical SEO, GEO signals & AI visibility — in days, not months.">
+<meta name="description" content="Get more traffic from Google & AI search. Fix SEO issues blocking your rankings - in minutes, not months.">
+<meta property="og:title" content="SeoGeoFix — Get Recommended by AI Search Engines">
+<meta property="og:description" content="Fix what's blocking your Google & AI rankings in minutes, not months.">
 <meta property="og:url" content="https://seogeofix.com">
 <meta name="twitter:card" content="summary_large_image">
-<title>SeoGeoFix — SEO, GEO & AI Search Optimization</title>
+<title>SeoGeoFix — Get More Traffic from Google & AI Search</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Mono:ital,wght@0,300;0,400;0,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#0A0F14;--bg2:#0d1219;--bg3:#131a22;--bg4:#1a2330;
-  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
-  --text:#eef2f7;--text2:#6b7a8d;--text3:#3d4a58;
-  --accent:#00F5A0;--accent2:#00c87d;
-  --accent-dim:rgba(0,245,160,0.07);--accent-dim2:rgba(0,245,160,0.14);
-  --blue:#00D1FF;--blue-dim:rgba(0,209,255,0.07);
-  --red:#ff4455;--amber:#ffaa00;
+  --bg:#080d12;--bg2:#0c1219;--bg3:#111922;--bg4:#182030;
+  --border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.1);
+  --text:#e8edf4;--text2:#5d6e82;--text3:#33404e;
+  --accent:#00f09c;--accent2:#00c47d;
+  --adim:rgba(0,240,156,0.08);--adim2:rgba(0,240,156,0.15);
+  --blue:#22d3ee;--bdim:rgba(34,211,238,0.08);
+  --red:#f43f5e;--amber:#f59e0b;--purple:#a78bfa;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+*{cursor:none!important}
 
 /* CURSOR */
-*{cursor:none!important}
-#co{position:fixed;width:36px;height:36px;border:1.5px solid rgba(0,245,160,.45);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s,background .25s,opacity .3s}
-#ci{position:fixed;width:5px;height:5px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:transform .15s,opacity .3s}
-#co.h{width:52px;height:52px;border-color:var(--accent);background:rgba(0,245,160,.05)}
-#co.c{width:28px;height:28px;background:rgba(0,245,160,.12)}
-#mg{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,245,160,.035) 0%,transparent 65%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:opacity .3s}
+#co{position:fixed;width:32px;height:32px;border:1.5px solid rgba(0,240,156,.4);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s,background .2s,opacity .3s}
+#ci{position:fixed;width:5px;height:5px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:transform .1s,opacity .3s}
+#co.h{width:48px;height:48px;border-color:var(--accent);background:rgba(0,240,156,.05)}
+#co.c{width:24px;height:24px;background:rgba(0,240,156,.1)}
+#mg{position:fixed;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,240,156,.03) 0%,transparent 60%);pointer-events:none;z-index:0;transform:translate(-50%,-50%)}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:all .3s}
-nav.scrolled{background:rgba(10,15,20,.92);border-color:var(--border);backdrop-filter:blur(24px)}
-.logo{font-size:16px;font-weight:700;letter-spacing:-.02em;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px}
-.logo-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.75)}}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
+nav.scrolled{background:rgba(8,13,18,.94);border-bottom:1px solid var(--border);backdrop-filter:blur(24px)}
+.logo{font-size:15px;font-weight:700;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px;letter-spacing:-.02em}
+.logo-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
 .nav-links a{color:var(--text2);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--text)}
-.nav-cta{background:var(--accent)!important;color:#000!important;padding:9px 20px!important;border-radius:7px;font-weight:700!important;font-size:13px!important;transition:all .2s!important}
+.nav-cta{background:var(--accent)!important;color:#000!important;padding:9px 20px!important;border-radius:8px;font-weight:700!important;font-size:13px!important;transition:all .2s!important;white-space:nowrap}
 .nav-cta:hover{background:var(--accent2)!important;transform:translateY(-1px)}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:110px 48px 80px;position:relative;overflow:hidden}
-.hero-bg-glow{position:absolute;pointer-events:none;border-radius:50%;filter:blur(80px)}
-.hero-bg-glow.g1{width:500px;height:500px;background:rgba(0,245,160,.05);top:-100px;left:-100px}
-.hero-bg-glow.g2{width:400px;height:400px;background:rgba(0,209,255,.04);bottom:-80px;right:0}
-.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:80px;align-items:center;position:relative;z-index:1;width:100%}
-.hero-left{animation:fadeUp .7s ease both}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-dim);border:1px solid rgba(0,245,160,.18);color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:28px;font-family:'DM Mono',monospace}
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 48px 80px;position:relative;overflow:hidden}
+.hero-glow-1{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,240,156,.06) 0%,transparent 65%);top:-100px;left:-200px;pointer-events:none;filter:blur(40px)}
+.hero-glow-2{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.04) 0%,transparent 65%);bottom:-100px;right:-100px;pointer-events:none;filter:blur(40px)}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:72px;align-items:center;width:100%;position:relative;z-index:1}
+
+/* HERO LEFT */
+.hero-left{animation:fadeUp .6s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--adim);border:1px solid rgba(0,240,156,.16);color:var(--accent);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 13px;border-radius:100px;margin-bottom:24px;font-family:'DM Mono',monospace}
 .hero-badge-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:pulse 1.5s ease-in-out infinite}
-h1{font-size:clamp(42px,5.5vw,68px);font-weight:800;line-height:1.05;letter-spacing:-.04em;margin-bottom:20px}
-h1 .ac{color:var(--accent)}
+
+h1{font-size:clamp(44px,5.5vw,72px);font-weight:800;line-height:1.03;letter-spacing:-.045em;margin-bottom:20px}
+h1 .gr{color:var(--accent)}
 h1 .bl{color:var(--blue)}
-.hero-sub{font-size:18px;color:var(--text2);max-width:480px;margin-bottom:32px;line-height:1.65;font-weight:400}
-.hero-bullets{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
-.hero-bullets li{font-size:15px;color:var(--text2);display:flex;align-items:center;gap:10px}
-.hero-bullets li::before{content:'';width:18px;height:18px;border-radius:50%;flex-shrink:0;background:var(--accent-dim2);border:1px solid rgba(0,245,160,.3);background-image:url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%2300F5A0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.hero-sub{font-size:17px;color:var(--text2);max-width:460px;margin-bottom:32px;line-height:1.65}
+.hero-bullets{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:36px}
+.hero-bullets li{font-size:14px;color:var(--text2);display:flex;align-items:center;gap:10px}
+.hero-bullets li::before{content:'';width:16px;height:16px;border-radius:50%;flex-shrink:0;background:var(--adim2);border:1px solid rgba(0,240,156,.28);background-image:url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5L3 5.5L8 1' stroke='%2300f09c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
 .hero-bullets li strong{color:var(--text);font-weight:600}
-.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
-.btn-primary{background:var(--accent);color:#000;padding:14px 28px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s;letter-spacing:-.01em}
-.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,245,160,.2)}
-.btn-secondary{color:var(--text2);padding:14px 22px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border2);transition:all .2s}
-.btn-secondary:hover{color:var(--text);border-color:rgba(255,255,255,.22);background:var(--bg3)}
-.cta-micro{font-size:12px;color:var(--text3);font-family:'DM Mono',monospace;margin-bottom:28px}
-.trust-row{display:flex;align-items:center;gap:20px;padding-top:28px;border-top:1px solid var(--border);flex-wrap:wrap}
-.trust-stat{text-align:left}
-.trust-num{font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--text);display:block;line-height:1}
+
+.hero-actions{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.btn-primary{background:var(--accent);color:#000;padding:13px 26px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:all .2s;letter-spacing:-.01em;white-space:nowrap}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,240,156,.2)}
+.btn-ghost{color:var(--text2);padding:13px 20px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;border:1px solid var(--border2);transition:all .2s;white-space:nowrap}
+.btn-ghost:hover{color:var(--text);border-color:rgba(255,255,255,.2);background:var(--bg3)}
+.cta-micro{font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;margin-bottom:32px}
+
+/* TRUST ROW */
+.trust-row{display:flex;align-items:center;gap:20px;padding-top:24px;border-top:1px solid var(--border);flex-wrap:wrap}
+.trust-num{font-size:20px;font-weight:800;letter-spacing:-.04em;color:var(--text);line-height:1}
 .trust-num span{color:var(--accent)}
-.trust-label{font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.06em}
-.trust-div{width:1px;height:32px;background:var(--border)}
-.crypto-tag{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);border:1px solid var(--border);padding:5px 12px;border-radius:100px;margin-left:auto}
-.crypto-tag-dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.trust-lbl{font-size:10px;color:var(--text3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.07em;margin-top:2px}
+.trust-div{width:1px;height:28px;background:var(--border)}
+.crypto-pill{display:inline-flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);border:1px solid var(--border);padding:4px 10px;border-radius:100px;margin-left:auto}
+.crypto-pill-dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
 
-/* MOCKUP */
-.hero-right{animation:fadeUp .7s .15s ease both}
-.audit-mockup{background:var(--bg2);border:1px solid var(--border2);border-radius:16px;overflow:hidden;box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.04)}
-.mockup-header{padding:14px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;background:var(--bg3)}
-.m-dot{width:10px;height:10px;border-radius:50%}
-.mockup-url{margin-left:8px;flex:1;background:var(--bg4);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-family:'DM Mono',monospace;font-size:11px;color:var(--text3)}
-.mockup-scores{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-bottom:1px solid var(--border)}
-.score-cell{background:var(--bg2);padding:14px 10px;text-align:center}
-.score-num{font-size:24px;font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:3px}
-.score-num.red{color:var(--red)}
-.score-num.amber{color:var(--amber)}
-.score-num.green{color:var(--accent)}
-.score-lbl{font-size:9px;color:var(--text3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.05em}
-.mockup-body{padding:16px}
-.mock-section-label{font-size:10px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;margin-top:4px}
-.mock-issue{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
-.mock-issue:last-child{border-bottom:none}
-.mock-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:5px}
-.md-red{background:var(--red);box-shadow:0 0 5px rgba(255,68,85,.5)}
-.md-amber{background:var(--amber);box-shadow:0 0 5px rgba(255,170,0,.4)}
-.md-green{background:var(--accent);box-shadow:0 0 5px rgba(0,245,160,.4)}
-.mock-issue-text{flex:1}
-.mock-issue-title{font-size:12px;font-weight:600;color:var(--text);margin-bottom:1px}
-.mock-issue-desc{font-size:11px;color:var(--text2);line-height:1.4}
-.mock-badge{flex-shrink:0;font-size:9px;font-family:'DM Mono',monospace;font-weight:500;padding:2px 7px;border-radius:4px;letter-spacing:.05em;margin-top:2px}
-.mb-crit{background:rgba(255,68,85,.1);color:var(--red);border:1px solid rgba(255,68,85,.2)}
-.mb-high{background:rgba(255,170,0,.1);color:var(--amber);border:1px solid rgba(255,170,0,.2)}
-.mb-ok{background:var(--accent-dim);color:var(--accent);border:1px solid rgba(0,245,160,.2)}
-.mockup-footer{padding:14px 16px;border-top:1px solid var(--border);background:var(--bg3);display:flex;align-items:center;justify-content:space-between}
-.mockup-footer-text{font-size:11px;color:var(--text3);font-family:'DM Mono',monospace}
-.mockup-footer-btn{background:var(--accent);color:#000;font-size:11px;font-weight:700;padding:6px 14px;border-radius:5px;border:none;font-family:'Inter',sans-serif;letter-spacing:-.01em}
+/* HERO RIGHT — DEVICE MOCKUP */
+.hero-right{animation:fadeUp .6s .12s ease both}
+.device-frame{background:var(--bg2);border:1px solid var(--border2);border-radius:20px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.04),0 0 60px rgba(0,240,156,.04)}
+.device-bar{background:var(--bg3);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;gap:8px}
+.d-dot{width:9px;height:9px;border-radius:50%}
+.device-url{flex:1;background:var(--bg4);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);margin-left:8px}
 
-/* URGENCY */
-.urgency-bar{background:rgba(0,245,160,.06);border-top:1px solid rgba(0,245,160,.12);border-bottom:1px solid rgba(0,245,160,.12);padding:10px 48px;text-align:center;font-size:13px;color:var(--accent);font-family:'DM Mono',monospace;letter-spacing:.05em}
-.urgency-bar span{color:var(--text2);margin:0 8px}
+/* SCORE ROW */
+.score-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-bottom:1px solid var(--border)}
+.score-cell{background:var(--bg2);padding:12px 8px;text-align:center}
+.sc-num{font-size:22px;font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:2px}
+.sc-red{color:var(--red)}.sc-amber{color:var(--amber)}.sc-green{color:var(--accent)}
+.sc-lbl{font-size:8px;color:var(--text3);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.06em}
+
+/* ISSUES LIST */
+.issues-body{padding:14px}
+.issues-header{font-size:9px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.09em;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.issue-row{display:flex;align-items:flex-start;gap:9px;padding:8px 0;border-bottom:1px solid var(--border)}
+.issue-row:last-child{border-bottom:none}
+.i-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.id-red{background:var(--red);box-shadow:0 0 4px rgba(244,63,94,.5)}
+.id-amber{background:var(--amber);box-shadow:0 0 4px rgba(245,158,11,.4)}
+.id-green{background:var(--accent);box-shadow:0 0 4px rgba(0,240,156,.4)}
+.i-text{flex:1}
+.i-title{font-size:11px;font-weight:600;color:var(--text);margin-bottom:1px}
+.i-desc{font-size:10px;color:var(--text2);line-height:1.4}
+.i-badge{font-size:8px;font-family:'DM Mono',monospace;padding:2px 6px;border-radius:3px;flex-shrink:0;margin-top:1px;font-weight:500}
+.ib-crit{background:rgba(244,63,94,.1);color:var(--red);border:1px solid rgba(244,63,94,.2)}
+.ib-high{background:rgba(245,158,11,.1);color:var(--amber);border:1px solid rgba(245,158,11,.2)}
+.ib-ok{background:var(--adim);color:var(--accent);border:1px solid rgba(0,240,156,.2)}
+.device-footer{padding:12px 14px;border-top:1px solid var(--border);background:var(--bg3);display:flex;align-items:center;justify-content:space-between}
+.df-text{font-size:10px;color:var(--text3);font-family:'DM Mono',monospace}
+.df-btn{background:var(--accent);color:#000;font-size:10px;font-weight:700;padding:5px 12px;border-radius:5px;border:none;font-family:'Inter',monospace}
+
+/* SOCIAL PROOF BAR */
+.proof-bar{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 48px;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;background:var(--bg2)}
+.proof-bar-text{font-size:13px;color:var(--text2)}
+.proof-bar-text strong{color:var(--text);font-weight:700}
+.proof-stat-row{display:flex;align-items:center;gap:6px}
+.proof-stat-num{font-size:15px;font-weight:700;color:var(--accent)}
+.proof-stat-lbl{font-size:12px;color:var(--text2)}
+.proof-div{width:1px;height:20px;background:var(--border)}
 
 /* SECTIONS */
-section{padding:90px 48px}
-.section-inner{max-width:1100px;margin:0 auto}
-.section-label{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.section-label::before{content:'';width:18px;height:1px;background:var(--accent)}
-h2{font-size:clamp(30px,4vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.07;margin-bottom:16px}
-.section-sub{font-size:17px;color:var(--text2);max-width:500px;line-height:1.65;margin-bottom:56px}
-.dark-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+section{padding:96px 48px}
+.si{max-width:1100px;margin:0 auto}
+.slabel{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.slabel::before{content:'';width:16px;height:1px;background:var(--accent)}
+h2{font-size:clamp(28px,3.5vw,44px);font-weight:800;letter-spacing:-.035em;line-height:1.07;margin-bottom:14px}
+.ssub{font-size:16px;color:var(--text2);max-width:480px;line-height:1.65;margin-bottom:52px}
+.ds{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 
-/* PROBLEMS */
-.problems-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden}
-.problem-card{background:var(--bg2);padding:28px;transition:background .2s}
-.problem-card:hover{background:var(--bg3)}
-.problem-icon{font-size:22px;margin-bottom:14px;display:block}
-.problem-title{font-size:15px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
-.problem-desc{font-size:13px;color:var(--text2);line-height:1.6}
+/* WHY SECTION */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.why-card{background:var(--bg2);padding:32px;transition:background .2s}
+.why-card:hover{background:var(--bg3)}
+.why-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:16px}
+.wi-red{background:rgba(244,63,94,.08);border:1px solid rgba(244,63,94,.2)}
+.wi-amber{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2)}
+.wi-blue{background:var(--bdim);border:1px solid rgba(34,211,238,.2)}
+.why-title{font-size:16px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+.why-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:14px}
+.why-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+.why-list li{font-size:12px;color:var(--text2);display:flex;align-items:center;gap:7px}
+.why-list li::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--text3);flex-shrink:0}
 
-/* SOLUTION */
-.solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.solution-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:32px;transition:all .3s;position:relative;overflow:hidden}
-.solution-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;opacity:0;transition:opacity .3s}
-.solution-card.s1::before{background:linear-gradient(90deg,transparent,var(--accent),transparent)}
-.solution-card.s2::before{background:linear-gradient(90deg,transparent,var(--blue),transparent)}
-.solution-card.s3::before{background:linear-gradient(90deg,transparent,#a78bfa,transparent)}
-.solution-card:hover{border-color:rgba(255,255,255,.14);transform:translateY(-3px)}
-.solution-card:hover::before{opacity:1}
-.sol-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:18px}
-.si-green{background:var(--accent-dim);border:1px solid rgba(0,245,160,.2)}
-.si-blue{background:var(--blue-dim);border:1px solid rgba(0,209,255,.2)}
-.si-purple{background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.2)}
-.sol-title{font-size:18px;font-weight:700;letter-spacing:-.02em;margin-bottom:10px}
-.sol-desc{font-size:14px;color:var(--text2);line-height:1.65;margin-bottom:18px}
-.sol-features{list-style:none;display:flex;flex-direction:column;gap:7px}
-.sol-features li{font-size:13px;color:var(--text2);display:flex;align-items:center;gap:8px}
-.sol-features li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--text3);flex-shrink:0}
-
-/* PROCESS */
-.process-wrap{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:14px;overflow:hidden}
-.process-step{padding:36px 28px;border-right:1px solid var(--border)}
-.process-step:last-child{border-right:none}
-.step-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);font-weight:500;letter-spacing:.1em;margin-bottom:18px;display:block}
-.step-title{font-size:17px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
-.step-desc{font-size:13px;color:var(--text2);line-height:1.6}
-
-/* PROOF */
-.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.proof-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:28px}
-.proof-stat{font-size:36px;font-weight:800;letter-spacing:-.04em;color:var(--accent);margin-bottom:6px}
-.proof-label{font-size:14px;color:var(--text2);line-height:1.5}
-
-/* AUDIT SAMPLE */
-.audit-full{background:var(--bg2);border:1px solid var(--border2);border-radius:16px;overflow:hidden}
-.audit-full-header{padding:14px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;background:var(--bg3)}
-.af-dot{width:10px;height:10px;border-radius:50%}
-.audit-full-body{padding:28px}
-.audit-row{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
-.audit-row:last-child{border-bottom:none}
-.audit-status{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
-.ar-red{background:var(--red);box-shadow:0 0 6px rgba(255,68,85,.5)}
-.ar-amber{background:var(--amber);box-shadow:0 0 5px rgba(255,170,0,.4)}
-.ar-green{background:var(--accent);box-shadow:0 0 5px rgba(0,245,160,.4)}
-.audit-row-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px}
-.audit-row-desc{font-size:13px;color:var(--text2);line-height:1.5}
-.audit-badge{margin-left:auto;flex-shrink:0;font-size:10px;font-family:'DM Mono',monospace;font-weight:500;padding:3px 8px;border-radius:4px;letter-spacing:.05em}
-.ab-crit{background:rgba(255,68,85,.1);color:var(--red);border:1px solid rgba(255,68,85,.2)}
-.ab-high{background:rgba(255,170,0,.1);color:var(--amber);border:1px solid rgba(255,170,0,.2)}
-.ab-ok{background:var(--accent-dim);color:var(--accent);border:1px solid rgba(0,245,160,.2)}
+/* HOW IT WORKS */
+.hiw-wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.hiw-steps{display:flex;flex-direction:column;gap:0}
+.hiw-step{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid var(--border)}
+.hiw-step:last-child{border-bottom:none}
+.hiw-num{width:36px;height:36px;border-radius:50%;background:var(--adim);border:1px solid rgba(0,240,156,.2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--accent);flex-shrink:0;font-family:'DM Mono',monospace}
+.hiw-content{}
+.hiw-title{font-size:16px;font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
+.hiw-desc{font-size:13px;color:var(--text2);line-height:1.6}
+.hiw-visual{background:var(--bg2);border:1px solid var(--border2);border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.hiw-vis-header{background:var(--bg3);border-bottom:1px solid var(--border);padding:12px 16px;display:flex;align-items:center;gap:7px}
+.hiw-vis-body{padding:20px}
+.hiw-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+.hiw-row:last-child{border-bottom:none}
+.hiw-row-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.hri-green{background:var(--adim);border:1px solid rgba(0,240,156,.2)}
+.hri-blue{background:var(--bdim);border:1px solid rgba(34,211,238,.2)}
+.hri-purple{background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.2)}
+.hiw-row-text{flex:1}
+.hiw-row-title{font-size:12px;font-weight:600;color:var(--text);margin-bottom:1px}
+.hiw-row-sub{font-size:11px;color:var(--text2)}
+.hiw-row-val{font-size:11px;font-family:'DM Mono',monospace;color:var(--accent);font-weight:500}
 
 /* PRICING */
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.price-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:36px;transition:all .3s;position:relative;overflow:hidden}
-.price-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
-.price-card:hover{border-color:rgba(255,255,255,.14);transform:translateY(-3px)}
-.price-card:hover::after{opacity:1}
-.price-card.featured{background:rgba(0,245,160,.04);border-color:rgba(0,245,160,.22)}
-.price-card.featured::after{opacity:1}
-.price-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-family:'DM Mono',monospace;color:var(--accent);background:var(--accent-dim);border:1px solid rgba(0,245,160,.2);padding:4px 10px;border-radius:100px;margin-bottom:20px}
-.price-amount{font-size:44px;font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:2px}
-.price-period{font-size:16px;color:var(--text2);font-weight:400}
-.price-name{font-size:20px;font-weight:700;letter-spacing:-.02em;margin:14px 0 8px}
-.price-desc{font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:24px}
-.price-features{list-style:none;display:flex;flex-direction:column;gap:10px}
-.price-features li{font-size:14px;color:var(--text2);display:flex;align-items:center;gap:10px}
-.price-features li::before{content:'';width:16px;height:16px;border-radius:50%;flex-shrink:0;background:var(--accent-dim2);border:1px solid rgba(0,245,160,.3);background-image:url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%2300F5A0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start}
+.pc{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:32px;transition:all .3s;position:relative}
+.pc::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;border-radius:16px 16px 0 0;opacity:0;transition:opacity .3s}
+.pc:hover{border-color:var(--border2);transform:translateY(-3px)}
+.pc:hover::after{opacity:1}
+.pc.feat{background:rgba(0,240,156,.04);border-color:rgba(0,240,156,.2);transform:scale(1.03)}
+.pc.feat::after{background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:1}
+.pc.feat:hover{transform:scale(1.03) translateY(-3px)}
+.pc-badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:'DM Mono',monospace;padding:4px 10px;border-radius:100px;margin-bottom:16px}
+.pcb-free{background:rgba(93,110,130,.1);color:var(--text2);border:1px solid rgba(93,110,130,.2)}
+.pcb-growth{background:var(--adim);color:var(--accent);border:1px solid rgba(0,240,156,.2)}
+.pcb-pro{background:rgba(167,139,250,.08);color:var(--purple);border:1px solid rgba(167,139,250,.2)}
+.pc-pop{position:absolute;top:16px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.pc-price{font-size:42px;font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:2px}
+.pc-period{font-size:15px;color:var(--text2);font-weight:400}
+.pc-name{font-size:18px;font-weight:700;letter-spacing:-.02em;margin:12px 0 6px}
+.pc-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:20px}
+.pc-cta{display:block;width:100%;text-align:center;padding:12px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;transition:all .2s;margin-bottom:8px}
+.pc-cta-ghost{background:transparent;border:1px solid var(--border2);color:var(--text2)}
+.pc-cta-ghost:hover{border-color:rgba(255,255,255,.2);color:var(--text);background:var(--bg3)}
+.pc-cta-primary{background:var(--accent);color:#000}
+.pc-cta-primary:hover{background:var(--accent2);transform:translateY(-1px)}
+.pc-cta-pro{background:var(--purple);color:#fff}
+.pc-cta-pro:hover{background:#8b5cf6;transform:translateY(-1px)}
+.pc-micro{font-size:11px;color:var(--text3);text-align:center;font-family:'DM Mono',monospace;margin-bottom:20px}
+.pc-features{list-style:none;display:flex;flex-direction:column;gap:8px}
+.pc-features li{font-size:13px;color:var(--text2);display:flex;align-items:center;gap:9px}
+.pc-features li::before{content:'';width:15px;height:15px;border-radius:50%;flex-shrink:0;background:var(--adim2);border:1px solid rgba(0,240,156,.28);background-image:url("data:image/svg+xml,%3Csvg width='9' height='7' viewBox='0 0 9 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5L3 5.5L8 1' stroke='%2300f09c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.pc-features li.na{color:var(--text3)}
+.pc-features li.na::before{background-image:none;background:var(--bg3);border-color:var(--border)}
 
-/* CTA */
-.cta-section{text-align:center;padding:100px 48px;border-top:1px solid var(--border);position:relative;overflow:hidden}
-.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,245,160,.06) 0%,transparent 70%);pointer-events:none}
-.cta-inner{max-width:560px;margin:0 auto;position:relative;z-index:1}
+/* VALUE ANCHOR */
+.value-anchor{text-align:center;margin-top:36px;padding:20px 28px;background:var(--adim);border:1px solid rgba(0,240,156,.12);border-radius:12px}
+.va-muted{font-size:14px;color:var(--text2)}
+.va-main{font-size:16px;color:var(--accent);font-weight:700;margin-top:4px}
+
+/* COMPARISON TABLE */
+.comp-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:48px}
+.comp-table th{padding:12px 18px;font-weight:500;border-bottom:1px solid var(--border);font-family:'DM Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+.comp-table th:first-child{text-align:left;color:var(--text2)}
+.comp-table th:not(:first-child){text-align:center}
+.comp-table th.th-feat{color:var(--accent)}
+.comp-table td{padding:12px 18px;border-bottom:1px solid var(--border)}
+.comp-table td:first-child{color:var(--text2)}
+.comp-table td:not(:first-child){text-align:center}
+.comp-table td.feat-col{background:rgba(0,240,156,.02)}
+.comp-table tr:last-child td{border-bottom:none}
+.ct-yes{color:var(--accent)}
+.ct-no{color:var(--text3)}
+.ct-basic{font-size:11px;color:var(--text2)}
+
+/* TRUST BADGES */
+.trust-badges{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;padding:24px;border:1px solid var(--border);border-radius:12px;margin-top:36px}
+.tb{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text2)}
+.tb-check{color:var(--accent);font-size:14px}
+
+/* FAQ */
+.faq-wrap{display:flex;flex-direction:column;gap:8px;margin-top:24px}
+.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .2s}
+.faq-item:hover{border-color:var(--border2)}
+.faq-trigger{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:none}
+.faq-q{font-size:14px;font-weight:600;color:var(--text)}
+.faq-icon{color:var(--accent);font-size:18px;font-weight:300;line-height:1;flex-shrink:0;margin-left:16px;transition:transform .2s}
+.faq-body{display:none;padding:0 22px 18px;font-size:13px;color:var(--text2);line-height:1.65}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+
+/* TOGGLE */
+.toggle-wrap{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:44px}
+.toggle-label{font-size:13px;font-weight:500;font-family:'DM Mono',monospace;transition:color .2s}
+.toggle-track{width:46px;height:25px;background:var(--adim2);border:1px solid rgba(0,240,156,.25);border-radius:100px;position:relative;flex-shrink:0}
+.toggle-thumb{position:absolute;top:3px;left:3px;width:19px;height:19px;background:var(--accent);border-radius:50%;transition:transform .2s}
+.toggle-save{font-size:10px;background:var(--adim);color:var(--accent);padding:3px 8px;border-radius:4px;font-family:'DM Mono',monospace;font-weight:600;border:1px solid rgba(0,240,156,.2)}
+
+/* CTA SECTION */
+.cta-sec{text-align:center;padding:100px 48px;border-top:1px solid var(--border);position:relative;overflow:hidden}
+.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,240,156,.05) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:520px;margin:0 auto;position:relative;z-index:1}
 .cta-inner h2{margin-bottom:14px}
-.cta-inner p{color:var(--text2);font-size:18px;margin-bottom:36px;line-height:1.6}
-.cta-note{margin-top:18px;font-size:12px;color:var(--text3);font-family:'DM Mono',monospace}
+.cta-inner p{color:var(--text2);font-size:17px;margin-bottom:32px;line-height:1.6}
+.cta-note{margin-top:16px;font-size:11px;color:var(--text3);font-family:'DM Mono',monospace}
 
 /* FOOTER */
-footer{border-top:1px solid var(--border);padding:36px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-.footer-left{font-size:14px;color:var(--text3)}
-.footer-right{display:flex;align-items:center;gap:24px}
-.footer-right a{font-size:13px;color:var(--text3);text-decoration:none;transition:color .2s;font-family:'DM Mono',monospace}
+footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-left{font-size:13px;color:var(--text3)}
+.footer-right{display:flex;align-items:center;gap:22px}
+.footer-right a{font-size:12px;color:var(--text3);text-decoration:none;transition:color .2s;font-family:'DM Mono',monospace}
 .footer-right a:hover{color:var(--accent)}
 
-/* ANIM */
-@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+
+/* MOBILE STICKY */
+#sticky{display:none;position:fixed;bottom:0;left:0;right:0;padding:12px 20px;background:rgba(8,13,18,.96);border-top:1px solid var(--border);backdrop-filter:blur(20px);z-index:90}
 
 /* RESPONSIVE */
 @media(max-width:960px){
-  .hero-inner{grid-template-columns:1fr;gap:48px}
+  .hero-inner,.hiw-wrap{grid-template-columns:1fr;gap:48px}
   .hero-right{order:-1}
-  .solution-grid,.pricing-grid,.proof-grid{grid-template-columns:1fr}
-  .process-wrap{grid-template-columns:1fr 1fr}
-  .process-step{border-right:none;border-bottom:1px solid var(--border)}
-  .process-step:last-child{border-bottom:none}
+  .why-grid,.pricing-grid{grid-template-columns:1fr}
+  .pc.feat{transform:none}
 }
 @media(max-width:640px){
-  nav{padding:16px 20px}
+  nav{padding:14px 20px}
   .nav-links{display:none}
-  section{padding:60px 20px}
-  .hero{padding:90px 20px 60px}
-  .urgency-bar{padding:10px 20px;font-size:11px}
-  .process-wrap{grid-template-columns:1fr}
-  footer{padding:28px 20px;flex-direction:column;align-items:flex-start}
+  section{padding:64px 20px}
+  .hero{padding:88px 20px 64px}
+  .proof-bar{padding:16px 20px;gap:20px}
+  footer{padding:24px 20px;flex-direction:column;align-items:flex-start}
+  #sticky{display:block}
 }
 </style>
 </head>
@@ -248,268 +295,325 @@ footer{border-top:1px solid var(--border);padding:36px 48px;display:flex;align-i
 <nav id="nav">
   <a href="#" class="logo"><span class="logo-dot"></span>SeoGeoFix</a>
   <ul class="nav-links">
-    <li><a href="#solution">Services</a></li>
-    <li><a href="#process">Process</a></li>
+    <li><a href="#why">Services</a></li>
+    <li><a href="#hiw">How it works</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="mailto:audit@seogeofix.com" class="nav-cta">Get Free Audit</a></li>
+    <li><a href="#" onclick="openForm();return false;" class="nav-cta">Analyze My Site →</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg-glow g1"></div>
-  <div class="hero-bg-glow g2"></div>
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
   <div class="hero-inner">
+
     <div class="hero-left">
-      <div class="hero-badge"><span class="hero-badge-dot"></span>SEO · GEO · AI Search Optimization</div>
-      <h1>Rank higher in<br><span class="ac">Google</span> &amp; <span class="bl">AI search</span></h1>
-      <p class="hero-sub">Fix technical SEO, GEO signals &amp; AI visibility — in days, not months.</p>
+      <div class="hero-badge"><span class="hero-badge-dot"></span>SEO · GEO · AI Search</div>
+      <h1>Get your site<br>recommended by<br><span class="gr">AI search engines</span></h1>
+      <p class="hero-sub">Fix what's blocking your Google &amp; AI rankings - in minutes, not months.</p>
       <ul class="hero-bullets">
-        <li><strong>Technical SEO</strong> — indexing, crawl errors, speed fixes</li>
-        <li><strong>GEO signals</strong> — entity optimization &amp; schema markup</li>
-        <li><strong>AI visibility</strong> — get cited by ChatGPT, Perplexity &amp; Claude</li>
+        <li><strong>Technical SEO</strong> - indexing, speed, crawl errors</li>
+        <li><strong>GEO signals</strong> - schema, entity optimization</li>
+        <li><strong>AI visibility</strong> - ChatGPT, Perplexity &amp; Claude</li>
       </ul>
       <div class="hero-actions">
-        <a href="mailto:audit@seogeofix.com" class="btn-primary">See What's Killing My Rankings →</a>
-        <a href="#pricing" class="btn-secondary">View Pricing</a>
+        <a href="#" onclick="openForm();return false;" class="btn-primary">Get Free Audit Report →</a>
+        <a href="#pricing" class="btn-ghost">View Pricing</a>
       </div>
-      <div class="cta-micro">No signup required · Results in 48h</div>
+      <div class="cta-micro">Rank higher on Google, ChatGPT, Perplexity, and more</div>
       <div class="trust-row">
-        <div class="trust-stat"><span class="trust-num">10<span>+</span></span><span class="trust-label">Years exp.</span></div>
+        <div>
+          <div class="trust-num">10<span>+</span></div>
+          <div class="trust-lbl">Years exp.</div>
+        </div>
         <div class="trust-div"></div>
-        <div class="trust-stat"><span class="trust-num">48<span>h</span></span><span class="trust-label">Delivery</span></div>
+        <div>
+          <div class="trust-num">+37<span>%</span></div>
+          <div class="trust-lbl">Avg traffic lift</div>
+        </div>
         <div class="trust-div"></div>
-        <div class="trust-stat"><span class="trust-num">+37<span>%</span></span><span class="trust-label">Avg traffic lift</span></div>
+        <div>
+          <div class="trust-num">48<span>h</span></div>
+          <div class="trust-lbl">Delivery</div>
+        </div>
         <div class="trust-div"></div>
-        <div class="trust-stat"><span class="trust-num">US<span>+EU</span></span><span class="trust-label">Markets</span></div>
-        <div class="crypto-tag"><span class="crypto-tag-dot"></span>Crypto accepted</div>
+        <div>
+          <div class="trust-num">100<span>+</span></div>
+          <div class="trust-lbl">Issues scanned</div>
+        </div>
+        <div class="crypto-pill"><span class="crypto-pill-dot"></span>Crypto accepted</div>
       </div>
     </div>
+
     <div class="hero-right">
-      <div class="audit-mockup">
-        <div class="mockup-header">
-          <div class="m-dot" style="background:#ff5f57"></div>
-          <div class="m-dot" style="background:#ffbd2e"></div>
-          <div class="m-dot" style="background:#28c840"></div>
-          <div class="mockup-url">seogeofix-report · example.com</div>
+      <div class="device-frame">
+        <div class="device-bar">
+          <div class="d-dot" style="background:#ff5f57"></div>
+          <div class="d-dot" style="background:#ffbd2e"></div>
+          <div class="d-dot" style="background:#28c840"></div>
+          <div class="device-url">seogeofix · audit report · example.com</div>
         </div>
-        <div class="mockup-scores">
-          <div class="score-cell"><div class="score-num red">42</div><div class="score-lbl">Performance</div></div>
-          <div class="score-cell"><div class="score-num amber">87</div><div class="score-lbl">Accessibility</div></div>
-          <div class="score-cell"><div class="score-num green">96</div><div class="score-lbl">Best Practices</div></div>
-          <div class="score-cell"><div class="score-num green">100</div><div class="score-lbl">SEO</div></div>
-        </div>
-        <div class="mockup-body">
-          <div class="mock-section-label">Issues Found — 13 total</div>
-          <div class="mock-issue">
-            <div class="mock-dot md-red"></div>
-            <div class="mock-issue-text"><div class="mock-issue-title">No sitemap.xml — returns 404</div><div class="mock-issue-desc">AI crawlers can't discover your pages</div></div>
-            <div class="mock-badge mb-crit">CRITICAL</div>
+        <div style="padding:14px 14px 6px;background:var(--bg2)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <span style="font-size:11px;font-weight:700;color:var(--text)">SEO Score</span>
+            <span style="font-size:10px;font-family:'DM Mono',monospace;color:var(--text3)">example.com</span>
           </div>
-          <div class="mock-issue">
-            <div class="mock-dot md-red"></div>
-            <div class="mock-issue-text"><div class="mock-issue-title">6 H1 tags on one page</div><div class="mock-issue-desc">Google can't identify your main keyword</div></div>
-            <div class="mock-badge mb-crit">CRITICAL</div>
+          <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
+            <span style="font-size:36px;font-weight:800;color:var(--red);letter-spacing:-.04em;line-height:1">62</span>
+            <span style="font-size:20px;color:var(--text3);font-weight:400">·</span>
+            <span style="font-size:36px;font-weight:800;color:var(--accent);letter-spacing:-.04em;line-height:1">91</span>
           </div>
-          <div class="mock-issue">
-            <div class="mock-dot md-red"></div>
-            <div class="mock-issue-text"><div class="mock-issue-title">No Open Graph tags</div><div class="mock-issue-desc">Links look blank on LinkedIn &amp; X</div></div>
-            <div class="mock-badge mb-crit">CRITICAL</div>
-          </div>
-          <div class="mock-issue">
-            <div class="mock-dot md-amber"></div>
-            <div class="mock-issue-text"><div class="mock-issue-title">No FAQPage schema</div><div class="mock-issue-desc">−40% AI search visibility</div></div>
-            <div class="mock-badge mb-high">GEO · HIGH</div>
-          </div>
-          <div class="mock-issue">
-            <div class="mock-dot md-green"></div>
-            <div class="mock-issue-text"><div class="mock-issue-title">SSL certificate valid</div><div class="mock-issue-desc">HTTPS properly configured</div></div>
-            <div class="mock-badge mb-ok">PASS</div>
+          <div style="font-size:10px;color:var(--text3);font-family:'DM Mono',monospace;margin-bottom:10px">Performance · SEO score</div>
+          <div style="background:var(--bg3);border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-size:10px;color:var(--text2);margin-bottom:2px">Issues Found</div>
+              <div style="font-size:22px;font-weight:800;color:var(--text);letter-spacing:-.04em">23</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-size:10px;color:var(--text2);margin-bottom:2px">Priority by</div>
+              <div style="font-size:11px;font-weight:600;color:var(--red)">High Impact</div>
+            </div>
           </div>
         </div>
-        <div class="mockup-footer">
-          <span class="mockup-footer-text">audit@seogeofix.com</span>
-          <button class="mockup-footer-btn">Get My Report →</button>
+        <div class="issues-body">
+          <div class="issues-header">
+            <span>Priority Issues</span>
+            <span style="color:var(--accent)">13 critical</span>
+          </div>
+          <div class="issue-row">
+            <div class="i-dot id-red"></div>
+            <div class="i-text">
+              <div class="i-title">No sitemap.xml - 404</div>
+              <div class="i-desc">AI crawlers can't discover pages</div>
+            </div>
+            <div class="i-badge ib-crit">CRITICAL</div>
+          </div>
+          <div class="issue-row">
+            <div class="i-dot id-red"></div>
+            <div class="i-text">
+              <div class="i-title">Missing Open Graph tags</div>
+              <div class="i-desc">Links look blank on LinkedIn &amp; X</div>
+            </div>
+            <div class="i-badge ib-crit">CRITICAL</div>
+          </div>
+          <div class="issue-row">
+            <div class="i-dot id-amber"></div>
+            <div class="i-text">
+              <div class="i-title">No FAQPage schema</div>
+              <div class="i-desc">−40% AI search visibility</div>
+            </div>
+            <div class="i-badge ib-high">GEO · HIGH</div>
+          </div>
+          <div class="issue-row">
+            <div class="i-dot id-green"></div>
+            <div class="i-text">
+              <div class="i-title">SSL certificate valid</div>
+              <div class="i-desc">HTTPS properly configured</div>
+            </div>
+            <div class="i-badge ib-ok">PASS</div>
+          </div>
+        </div>
+        <div class="device-footer">
+          <span class="df-text">audit@seogeofix.com</span>
+          <button class="df-btn">Get Full Report →</button>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- URGENCY -->
-<div class="urgency-bar">Free audit slots available today<span>·</span>Limited daily capacity<span>·</span>48h turnaround</div>
+<!-- SOCIAL PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-bar-text">Trusted by <strong>500+</strong> SaaS &amp; eCommerce websites</div>
+  <div class="proof-div"></div>
+  <div class="proof-stat-row"><span class="proof-stat-num">+37%</span><span class="proof-stat-lbl">avg traffic increase</span></div>
+  <div class="proof-div"></div>
+  <div class="proof-stat-row"><span class="proof-stat-num">+40%</span><span class="proof-stat-lbl">AI visibility boost</span></div>
+  <div class="proof-div"></div>
+  <div class="proof-stat-row"><span class="proof-stat-num">48h</span><span class="proof-stat-lbl">audit delivery</span></div>
+</div>
 
-<!-- PROBLEMS -->
-<section class="dark-section">
-  <div class="section-inner">
-    <div class="section-label">The Problem</div>
-    <h2>Why your site isn't getting traffic</h2>
-    <p class="section-sub">Most sites have critical issues invisible to owners — but search engines and AI see everything.</p>
-    <div class="problems-grid reveal">
-      <div class="problem-card"><span class="problem-icon">⚡</span><div class="problem-title">Slow load speed</div><div class="problem-desc">Below 70 on PageSpeed and Google penalizes your ranking. Most sites score under 60 on mobile.</div></div>
-      <div class="problem-card"><span class="problem-icon">🤖</span><div class="problem-title">AI can't find you</div><div class="problem-desc">ChatGPT, Claude &amp; Perplexity use different signals. Without GEO optimization, AI ignores your site entirely.</div></div>
-      <div class="problem-card"><span class="problem-icon">🗺️</span><div class="problem-title">Missing schema markup</div><div class="problem-desc">No structured data = no rich results, no local search, no AI citations. Leaving traffic on the table.</div></div>
-      <div class="problem-card"><span class="problem-icon">📄</span><div class="problem-title">Broken technical SEO</div><div class="problem-desc">Duplicate H1s, missing sitemap, broken robots.txt — small issues with big ranking consequences.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SOLUTION -->
-<section id="solution">
-  <div class="section-inner">
-    <div class="section-label">Our Services</div>
-    <h2>Three things we fix.<br>One complete solution.</h2>
-    <p class="section-sub">We cover every layer of modern search — traditional, local, and AI-powered.</p>
-    <div class="solution-grid reveal">
-      <div class="solution-card s1">
-        <div class="sol-icon si-green">🔍</div>
-        <div class="sol-title">SEO Audit &amp; Fix</div>
-        <div class="sol-desc">Full technical scan of your site. We fix everything blocking Google from ranking you.</div>
-        <ul class="sol-features">
-          <li>PageSpeed optimization</li><li>Crawl &amp; indexing fixes</li><li>Sitemap &amp; robots.txt</li><li>Meta tags &amp; canonical URLs</li><li>Heading structure</li>
+<!-- WHY -->
+<section class="ds" id="why">
+  <div class="si">
+    <div class="slabel">The Problem</div>
+    <h2>Why your site is getting <span style="color:var(--red)">ignored.</span></h2>
+    <p class="ssub">Most sites have critical visibility issues - invisible to owners, but obvious to search engines and AI.</p>
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <div class="why-icon wi-red">🔍</div>
+        <div class="why-title">Not properly indexed</div>
+        <div class="why-desc">Google and AI crawlers can't discover or rank your content.</div>
+        <ul class="why-list">
+          <li>Broken sitemap or missing entirely</li>
+          <li>Blocked pages in robots.txt</li>
+          <li>Duplicate content issues</li>
         </ul>
       </div>
-      <div class="solution-card s2">
-        <div class="sol-icon si-blue">🌐</div>
-        <div class="sol-title">GEO Optimization</div>
-        <div class="sol-desc">Entity optimization and structured data that makes your site understood by search engines and AI.</div>
-        <ul class="sol-features">
-          <li>Schema markup (JSON-LD)</li><li>LocalBusiness &amp; Person schema</li><li>FAQPage schema</li><li>Open Graph &amp; Twitter Card</li><li>Structured data audit</li>
+      <div class="why-card">
+        <div class="why-icon wi-amber">📍</div>
+        <div class="why-title">Missing GEO signals</div>
+        <div class="why-desc">No structured data means no rich results and no local presence.</div>
+        <ul class="why-list">
+          <li>No schema markup (JSON-LD)</li>
+          <li>Missing Open Graph tags</li>
+          <li>No entity optimization</li>
         </ul>
       </div>
-      <div class="solution-card s3">
-        <div class="sol-icon si-purple">✨</div>
-        <div class="sol-title">AI Search Visibility</div>
-        <div class="sol-desc">Optimize for ChatGPT, Perplexity &amp; Claude — AI engines that now answer your customers' questions.</div>
-        <ul class="sol-features">
-          <li>Answer-first content structure</li><li>Statistics &amp; citation signals</li><li>Brave Search indexing</li><li>LLM visibility audit</li><li>AI citation monitoring</li>
+      <div class="why-card">
+        <div class="why-icon wi-blue">🤖</div>
+        <div class="why-title">AI can't understand you</div>
+        <div class="why-desc">ChatGPT, Perplexity &amp; Claude ignore sites without AI-readable structure.</div>
+        <ul class="why-list">
+          <li>No FAQPage schema</li>
+          <li>Content not answer-first</li>
+          <li>Not indexed in Brave Search</li>
         </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process" class="dark-section">
-  <div class="section-inner">
-    <div class="section-label">How It Works</div>
-    <h2>From contact to results<br>in days, not months.</h2>
-    <div class="process-wrap reveal" style="margin-top:48px">
-      <div class="process-step"><span class="step-num">01 · CONTACT</span><div class="step-title">Send your URL</div><div class="step-desc">Email your site URL. We confirm scope within hours. No signup, no forms.</div></div>
-      <div class="process-step"><span class="step-num">02 · AUDIT</span><div class="step-title">We scan 100+ factors</div><div class="step-desc">Full SEO + GEO + AI analysis using Claude Code and custom tools. Every issue documented.</div></div>
-      <div class="process-step"><span class="step-num">03 · REPORT</span><div class="step-title">You get the report</div><div class="step-desc">Clean PDF with prioritized issues, exact fixes, and impact ratings. Delivered in 48 hours.</div></div>
-      <div class="process-step"><span class="step-num">04 · FIX</span><div class="step-title">We implement</div><div class="step-desc">On Full Audit plan, we fix everything directly. No hand-holding required from your side.</div></div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="#" onclick="openForm();return false;" class="btn-primary" style="display:inline-flex">See what's blocking my site →</a>
     </div>
   </div>
 </section>
 
-<!-- PROOF -->
-<section>
-  <div class="section-inner">
-    <div class="section-label">Results</div>
-    <h2>What clients see<br>after we fix their sites.</h2>
-    <div class="proof-grid reveal">
-      <div class="proof-card"><div class="proof-stat">+37%</div><div class="proof-label">Average organic traffic growth after full audit implementation</div></div>
-      <div class="proof-card"><div class="proof-stat">+40%</div><div class="proof-label">AI search visibility increase after GEO optimization and schema fixes</div></div>
-      <div class="proof-card"><div class="proof-stat">48h</div><div class="proof-label">Average time from first contact to receiving full audit report</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- AUDIT SAMPLE -->
-<section class="dark-section" id="audit">
-  <div class="section-inner">
-    <div class="section-label">Sample Output</div>
-    <h2>What your audit<br>report looks like.</h2>
-    <p class="section-sub">Real findings. Prioritized by impact. Actionable from day one.</p>
-    <div class="audit-full reveal">
-      <div class="audit-full-header">
-        <div class="af-dot" style="background:#ff5f57"></div>
-        <div class="af-dot" style="background:#ffbd2e"></div>
-        <div class="af-dot" style="background:#28c840"></div>
-        <span style="margin-left:12px;font-family:'DM Mono',monospace;font-size:12px;color:var(--text3)">seogeofix-report.pdf · example.com · 13 issues found</span>
+<!-- HOW IT WORKS -->
+<section id="hiw">
+  <div class="si">
+    <div class="slabel">How It Works</div>
+    <h2>From URL to results<br>in 3 simple steps.</h2>
+    <div class="hiw-wrap reveal">
+      <div class="hiw-steps">
+        <div class="hiw-step">
+          <div class="hiw-num">1</div>
+          <div class="hiw-content">
+            <div class="hiw-title">Enter your site URL</div>
+            <div class="hiw-desc">Send us your domain. No signup, no forms, no friction. Just your URL and we start scanning.</div>
+          </div>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">2</div>
+          <div class="hiw-content">
+            <div class="hiw-title">We scan 100+ site factors</div>
+            <div class="hiw-desc">Full technical SEO, GEO signals, and AI search visibility analysis using Claude Code and custom tools.</div>
+          </div>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-num">3</div>
+          <div class="hiw-content">
+            <div class="hiw-title">Get an actionable report</div>
+            <div class="hiw-desc">Clean PDF with every issue ranked by impact. Exact fixes, not vague suggestions. Delivered in 48 hours.</div>
+          </div>
+        </div>
       </div>
-      <div class="audit-full-body">
-        <div class="audit-row"><div class="audit-status ar-red"></div><div style="flex:1"><div class="audit-row-title">No sitemap.xml — returns 404</div><div class="audit-row-desc">Search engines and AI crawlers cannot discover your pages.</div></div><div class="audit-badge ab-crit">CRITICAL</div></div>
-        <div class="audit-row"><div class="audit-status ar-red"></div><div style="flex:1"><div class="audit-row-title">6 H1 tags on one page</div><div class="audit-row-desc">Google cannot identify your primary keyword. Keep one H1, demote the rest to H2/H3.</div></div><div class="audit-badge ab-crit">CRITICAL</div></div>
-        <div class="audit-row"><div class="audit-status ar-red"></div><div style="flex:1"><div class="audit-row-title">No Open Graph tags</div><div class="audit-row-desc">Links shared on LinkedIn and X show blank previews — missing og:image, og:title, og:description.</div></div><div class="audit-badge ab-crit">CRITICAL</div></div>
-        <div class="audit-row"><div class="audit-status ar-amber"></div><div style="flex:1"><div class="audit-row-title">No FAQPage schema — missing ~40% AI visibility</div><div class="audit-row-desc">ChatGPT and Claude won't cite your content in answers without structured FAQ data.</div></div><div class="audit-badge ab-high">GEO · HIGH</div></div>
-        <div class="audit-row"><div class="audit-status ar-amber"></div><div style="flex:1"><div class="audit-row-title">PageSpeed score: 42/100 on mobile</div><div class="audit-row-desc">~50% of mobile visitors leave before the page loads. Direct revenue and ranking impact.</div></div><div class="audit-badge ab-high">HIGH</div></div>
-        <div class="audit-row"><div class="audit-status ar-amber"></div><div style="flex:1"><div class="audit-row-title">Site not indexed in Brave Search</div><div class="audit-row-desc">Claude AI uses Brave for web search. Without Brave indexing, Claude can't recommend your site.</div></div><div class="audit-badge ab-high">AI · HIGH</div></div>
-        <div class="audit-row"><div class="audit-status ar-green"></div><div style="flex:1"><div class="audit-row-title">SSL certificate valid</div><div class="audit-row-desc">HTTPS properly configured. No mixed content issues detected.</div></div><div class="audit-badge ab-ok">PASS</div></div>
+      <div class="hiw-visual">
+        <div class="hiw-vis-header">
+          <div class="d-dot" style="background:#ff5f57;width:8px;height:8px"></div>
+          <div class="d-dot" style="background:#ffbd2e;width:8px;height:8px"></div>
+          <div class="d-dot" style="background:#28c840;width:8px;height:8px"></div>
+          <span style="font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;margin-left:8px">Scan Results · example.com</span>
+        </div>
+        <div class="hiw-vis-body">
+          <div style="font-size:10px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px">Scanned Modules</div>
+          <div class="hiw-row">
+            <div class="hiw-row-icon hri-green">🔍</div>
+            <div class="hiw-row-text">
+              <div class="hiw-row-title">Technical SEO</div>
+              <div class="hiw-row-sub">Indexing, speed, crawl</div>
+            </div>
+            <div class="hiw-row-val">8 issues</div>
+          </div>
+          <div class="hiw-row">
+            <div class="hiw-row-icon hri-blue">🌐</div>
+            <div class="hiw-row-text">
+              <div class="hiw-row-title">GEO Entity report</div>
+              <div class="hiw-row-sub">Schema, Open Graph</div>
+            </div>
+            <div class="hiw-row-val">+40% boost</div>
+          </div>
+          <div class="hiw-row">
+            <div class="hiw-row-icon hri-purple">✨</div>
+            <div class="hiw-row-text">
+              <div class="hiw-row-title">AI Search visibility</div>
+              <div class="hiw-row-sub">ChatGPT, Perplexity</div>
+            </div>
+            <div class="hiw-row-val">+37% reach</div>
+          </div>
+          <div style="margin-top:16px;padding:12px;background:var(--adim);border:1px solid rgba(0,240,156,.15);border-radius:8px;text-align:center">
+            <div style="font-size:11px;color:var(--text2);margin-bottom:4px">Report ready in</div>
+            <div style="font-size:20px;font-weight:800;color:var(--accent);letter-spacing:-.04em">48h</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing" style="padding:120px 48px">
-  <div class="section-inner">
-    <div class="section-label">Pricing</div>
-    <h2>Simple pricing.<br>Clear results.</h2>
-    <p class="section-sub">No contracts. No hidden fees. Cancel anytime.</p>
+<section id="pricing" class="ds" style="padding:120px 48px">
+  <div class="si">
+    <div class="slabel">Pricing</div>
+    <h2>Transparent pricing<br>for proven results.</h2>
+    <p class="ssub">No contracts. No hidden fees. Cancel anytime.</p>
 
-    <!-- TOGGLE -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:48px">
-      <span id="toggle-onetime" style="font-size:14px;font-weight:600;color:var(--text);font-family:'DM Mono',monospace">One-time</span>
-      <div id="billing-toggle" onclick="toggleBilling()" style="width:48px;height:26px;background:var(--accent-dim2);border:1px solid rgba(0,245,160,.3);border-radius:100px;position:relative;cursor:none;transition:background .2s;flex-shrink:0">
-        <div id="toggle-thumb" style="position:absolute;top:4px;left:4px;width:18px;height:18px;background:var(--accent);border-radius:50%;transition:transform .2s"></div>
+    <div class="toggle-wrap">
+      <span class="toggle-label" id="tl-once" style="color:var(--text)">One-time</span>
+      <div class="toggle-track" id="toggle-track" onclick="toggleBilling()" style="width:48px;height:26px;background:var(--adim2);border:1px solid rgba(0,240,156,.25);border-radius:100px;position:relative;flex-shrink:0">
+        <div class="toggle-thumb" id="toggle-thumb" style="position:absolute;top:4px;left:4px;width:18px;height:18px;background:var(--accent);border-radius:50%;transition:transform .2s"></div>
       </div>
-      <span id="toggle-monthly" style="font-size:14px;font-weight:500;color:var(--text2);font-family:'DM Mono',monospace">Monthly</span>
-      <span style="font-size:11px;background:rgba(0,245,160,.1);color:var(--accent);padding:3px 8px;border-radius:4px;font-family:'DM Mono',monospace;font-weight:600">Save 20%</span>
+      <span class="toggle-label" id="tl-monthly" style="color:var(--text2)">Monthly</span>
+      <span class="toggle-save">Save 20%</span>
     </div>
 
-    <!-- CARDS -->
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start" class="reveal">
+    <div class="pricing-grid reveal">
 
-      <!-- FREE -->
-      <div class="price-card" style="padding:36px">
-        <div class="price-tag" style="background:rgba(107,122,141,.1);color:var(--text2);border-color:rgba(107,122,141,.2)">Free</div>
-        <div class="price-amount" style="margin-top:8px">$0</div>
-        <div class="price-name">Free Audit</div>
-        <div class="price-desc">Start here. See your biggest issues instantly — no signup needed.</div>
-        <a href="mailto:audit@seogeofix.com" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;background:transparent;border:1px solid var(--border2);color:var(--text2)">Run Free Audit →</a>
-        <div style="font-size:11px;color:var(--text3);text-align:center;font-family:'DM Mono',monospace;margin-bottom:24px">No signup required</div>
-        <ul class="price-features">
+      <div class="pc">
+        <div class="pc-badge pcb-free">Free</div>
+        <div class="pc-price">$0</div>
+        <div class="pc-name">Free Audit</div>
+        <div class="pc-desc">Start here. See your biggest issues instantly - no signup needed.</div>
+        <a href="#" onclick="openForm();return false;" class="pc-cta pc-cta-ghost">Run Free Audit →</a>
+        <div class="pc-micro">No signup required</div>
+        <ul class="pc-features">
           <li>Basic SEO scan</li>
-          <li>Indexing &amp; crawl issues</li>
-          <li>AI visibility check</li>
-          <li style="color:var(--text3);text-decoration:line-through">Full report preview</li>
-          <li style="color:var(--text3);text-decoration:line-through">Competitor insights</li>
-          <li style="color:var(--text3);text-decoration:line-through">Fix roadmap</li>
+          <li>Indexing &amp; crawl check</li>
+          <li>AI visibility preview</li>
+          <li class="na">Full report</li>
+          <li class="na">Competitor insights</li>
+          <li class="na">Fix roadmap</li>
         </ul>
       </div>
 
-      <!-- GROWTH — FEATURED -->
-      <div class="price-card featured" style="padding:36px 36px 36px;transform:scale(1.04);position:relative;overflow:visible">
-        <div style="display:inline-block;background:var(--accent);color:#000;font-size:11px;font-weight:700;padding:5px 14px;border-radius:100px;white-space:nowrap;font-family:'DM Mono',monospace;letter-spacing:.06em;margin-bottom:16px">⭐ MOST POPULAR</div>
-        <div class="price-tag">Growth</div>
-        <div class="price-amount" id="growth-price" style="margin-top:8px">$79</div>
-        <div class="price-name">Growth Audit</div>
-        <div class="price-desc">Full SEO + GEO audit. See exactly what's blocking your rankings.</div>
-        <a href="mailto:audit@seogeofix.com" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:10px">Get Full Report →</a>
-        <div style="font-size:11px;color:var(--accent);text-align:center;font-family:'DM Mono',monospace;margin-bottom:24px;opacity:.8">Fixing 1 issue can increase traffic 20%+</div>
-        <ul class="price-features">
+      <div class="pc feat" style="padding-top:52px">
+        <div class="pc-pop" style="background:var(--accent);color:#000;font-size:10px;font-weight:700;padding:5px 16px;border-radius:6px;position:absolute;top:16px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:'DM Mono',monospace;letter-spacing:.06em">MOST POPULAR</div>
+        <div class="pc-badge pcb-growth">Growth</div>
+        <div class="pc-price" id="price-growth">$79</div>
+        <div class="pc-name">Growth Audit</div>
+        <div class="pc-desc">Full SEO + GEO audit. See exactly what's blocking your rankings.</div>
+        <a href="#" onclick="openForm();return false;" class="pc-cta pc-cta-primary">Get Full Report →</a>
+        <div class="pc-micro" style="color:var(--accent);opacity:.85">Fixing 1 issue can lift traffic 20%+</div>
+        <ul class="pc-features">
           <li>Full SEO + GEO audit</li>
-          <li>AI search optimization analysis</li>
+          <li>AI search optimization</li>
           <li>100+ issues detected</li>
           <li>Priority fix roadmap</li>
           <li>Competitor insights</li>
-          <li>Downloadable report</li>
+          <li>Downloadable PDF report</li>
         </ul>
       </div>
 
-      <!-- PRO -->
-      <div class="price-card" style="padding:36px">
-        <div class="price-tag" style="background:rgba(167,139,250,.08);color:#a78bfa;border-color:rgba(167,139,250,.2)">Pro</div>
-        <div class="price-amount" id="pro-price" style="margin-top:8px">$249</div>
-        <div class="price-name">Pro Optimization</div>
-        <div class="price-desc">For SaaS, agencies &amp; serious growth. Full implementation included.</div>
-        <a href="mailto:audit@seogeofix.com" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;background:#a78bfa;color:#000">Scale My SEO →</a>
-        <div style="font-size:11px;color:var(--text3);text-align:center;font-family:'DM Mono',monospace;margin-bottom:24px">Best for SaaS, agencies &amp; serious growth</div>
-        <ul class="price-features">
+      <div class="pc">
+        <div class="pc-badge pcb-pro">Pro</div>
+        <div class="pc-price" id="price-pro">$249</div>
+        <div class="pc-name">Pro Optimization</div>
+        <div class="pc-desc">Full implementation included. For SaaS, agencies &amp; serious growth.</div>
+        <a href="#" onclick="openForm();return false;" class="pc-cta pc-cta-pro">Scale My SEO →</a>
+        <div class="pc-micro">Best for SaaS &amp; agencies</div>
+        <ul class="pc-features">
           <li>Everything in Growth</li>
-          <li>AI visibility optimization</li>
+          <li>AI visibility strategy</li>
           <li>GEO entity optimization</li>
           <li>Continuous monitoring</li>
           <li>Weekly updates</li>
@@ -519,116 +623,72 @@ footer{border-top:1px solid var(--border);padding:36px 48px;display:flex;align-i
 
     </div>
 
-    <!-- VALUE ANCHOR -->
-    <div style="text-align:center;margin-top:40px;padding:24px;background:var(--accent-dim);border:1px solid rgba(0,245,160,.15);border-radius:12px" class="reveal">
-      <p style="font-size:15px;color:var(--text2)">SEO audits typically cost <span style="color:var(--text);font-weight:600;text-decoration:line-through">$500–$5,000</span> at agencies.</p>
-      <p style="font-size:17px;color:var(--accent);font-weight:700;margin-top:4px">Get actionable insights starting at $79 — delivered in 48h.</p>
+    <div class="value-anchor reveal">
+      <div class="va-muted">SEO audits at agencies typically cost <strong style="color:var(--text);text-decoration:line-through">$500–$5,000</strong></div>
+      <div class="va-main">Get actionable insights starting at $79 - delivered in 48h</div>
     </div>
 
-    <!-- COMPARISON TABLE -->
-    <div style="margin-top:60px;overflow-x:auto" class="reveal">
-      <table style="width:100%;border-collapse:collapse;font-size:14px">
+    <div style="overflow-x:auto;margin-top:48px" class="reveal">
+      <table class="comp-table">
         <thead>
           <tr>
-            <th style="text-align:left;padding:14px 20px;color:var(--text2);font-weight:500;font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--border)">Features</th>
-            <th style="text-align:center;padding:14px 20px;color:var(--text2);font-weight:600;border-bottom:1px solid var(--border)">Free</th>
-            <th style="text-align:center;padding:14px 20px;color:var(--accent);font-weight:700;border-bottom:1px solid var(--border);background:rgba(0,245,160,.03)">Growth</th>
-            <th style="text-align:center;padding:14px 20px;color:#a78bfa;font-weight:600;border-bottom:1px solid var(--border)">Pro</th>
+            <th style="text-align:left">Features</th>
+            <th>Free</th>
+            <th class="th-feat">Growth</th>
+            <th>Pro</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom:1px solid var(--border)">
-            <td style="padding:14px 20px;color:var(--text2)">SEO audit</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border)">
-            <td style="padding:14px 20px;color:var(--text2)">Technical issues</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border)">
-            <td style="padding:14px 20px;color:var(--text2)">GEO optimization</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border)">
-            <td style="padding:14px 20px;color:var(--text2)">AI visibility</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--text2);font-size:12px">Basic</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border)">
-            <td style="padding:14px 20px;color:var(--text2)">Competitor analysis</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border)">
-            <td style="padding:14px 20px;color:var(--text2)">Fix roadmap</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border)">
-            <td style="padding:14px 20px;color:var(--text2)">Monitoring</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--text3);background:rgba(0,245,160,.03)">✗</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-          </tr>
-          <tr>
-            <td style="padding:14px 20px;color:var(--text2)">Priority support</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--text3);background:rgba(0,245,160,.03)">✗</td>
-            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
-          </tr>
+          <tr><td>SEO audit</td><td class="ct-yes">✓</td><td class="ct-yes feat-col">✓</td><td class="ct-yes">✓</td></tr>
+          <tr><td>Technical issues</td><td class="ct-yes">✓</td><td class="ct-yes feat-col">✓</td><td class="ct-yes">✓</td></tr>
+          <tr><td>GEO optimization</td><td class="ct-no">✗</td><td class="ct-yes feat-col">✓</td><td class="ct-yes">✓</td></tr>
+          <tr><td>AI visibility</td><td class="ct-basic feat-col" style="background:transparent">Basic</td><td class="ct-yes feat-col">✓</td><td class="ct-yes">✓</td></tr>
+          <tr><td>Competitor analysis</td><td class="ct-no">✗</td><td class="ct-yes feat-col">✓</td><td class="ct-yes">✓</td></tr>
+          <tr><td>Fix roadmap</td><td class="ct-no">✗</td><td class="ct-yes feat-col">✓</td><td class="ct-yes">✓</td></tr>
+          <tr><td>Monitoring</td><td class="ct-no">✗</td><td class="ct-no feat-col">✗</td><td class="ct-yes">✓</td></tr>
+          <tr><td>Priority support</td><td class="ct-no">✗</td><td class="ct-no feat-col">✗</td><td class="ct-yes">✓</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- TRUST BADGES -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:40px;padding:24px;border:1px solid var(--border);border-radius:12px" class="reveal">
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> No credit card required</div>
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> Instant results</div>
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> Cancel anytime</div>
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> 30-day money-back guarantee</div>
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> Crypto accepted</div>
+    <div class="trust-badges reveal">
+      <div class="tb"><span class="tb-check">✓</span> No credit card required</div>
+      <div class="tb"><span class="tb-check">✓</span> Instant results</div>
+      <div class="tb"><span class="tb-check">✓</span> Cancel anytime</div>
+      <div class="tb"><span class="tb-check">✓</span> 30-day money-back guarantee</div>
+      <div class="tb"><span class="tb-check">✓</span> Crypto accepted</div>
     </div>
 
-    <!-- FAQ -->
-    <div style="margin-top:60px" class="reveal">
-      <h3 style="font-size:24px;font-weight:700;letter-spacing:-.02em;margin-bottom:24px;text-align:center">Frequently asked questions</h3>
-      <div style="display:flex;flex-direction:column;gap:2px">
-        <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 24px;cursor:none">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-size:15px;font-weight:600;color:var(--text)">How fast do I get results?</span>
-            <span class="faq-arrow" style="color:var(--accent);font-size:18px;transition:transform .2s">+</span>
+    <div style="margin-top:60px">
+      <h3 style="font-size:22px;font-weight:700;letter-spacing:-.03em;text-align:center;margin-bottom:24px">Frequently asked questions</h3>
+      <div class="faq-wrap reveal">
+        <div class="faq-item">
+          <div class="faq-trigger" onclick="toggleFaq(this.parentElement)">
+            <span class="faq-q">How fast do I get results?</span>
+            <span class="faq-icon">+</span>
           </div>
-          <div class="faq-body" style="display:none;margin-top:12px;font-size:14px;color:var(--text2);line-height:1.6">Instant audit preview — you'll see your top issues right away. Full detailed report delivered within 48 hours. Fixes can be applied the same day on Pro plan.</div>
+          <div class="faq-body">Instant audit preview - top issues visible right away. Full detailed report in 48 hours. Fixes applied same day on Pro plan.</div>
         </div>
-        <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 24px;cursor:none;margin-top:8px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-size:15px;font-weight:600;color:var(--text)">Do I need technical knowledge?</span>
-            <span class="faq-arrow" style="color:var(--accent);font-size:18px;transition:transform .2s">+</span>
+        <div class="faq-item">
+          <div class="faq-trigger" onclick="toggleFaq(this.parentElement)">
+            <span class="faq-q">Do I need technical knowledge?</span>
+            <span class="faq-icon">+</span>
           </div>
-          <div class="faq-body" style="display:none;margin-top:12px;font-size:14px;color:var(--text2);line-height:1.6">No. We show exactly what to fix, in plain language, with step-by-step instructions. On Pro plan, we handle all technical implementation for you.</div>
+          <div class="faq-body">No. We show exactly what to fix in plain language with step-by-step instructions. On Pro plan, we handle all technical implementation for you.</div>
         </div>
-        <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 24px;cursor:none;margin-top:8px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-size:15px;font-weight:600;color:var(--text)">Is this better than an SEO agency?</span>
-            <span class="faq-arrow" style="color:var(--accent);font-size:18px;transition:transform .2s">+</span>
+        <div class="faq-item">
+          <div class="faq-trigger" onclick="toggleFaq(this.parentElement)">
+            <span class="faq-q">Is this better than an SEO agency?</span>
+            <span class="faq-icon">+</span>
           </div>
-          <div class="faq-body" style="display:none;margin-top:12px;font-size:14px;color:var(--text2);line-height:1.6">Faster, cheaper, and data-driven. Agencies charge $500–$5,000 for audits that take weeks. We deliver in 48 hours with AI-powered analysis that covers GEO and AI search visibility — things most agencies don't even offer.</div>
+          <div class="faq-body">Faster, cheaper, data-driven. Agencies charge $500–$5,000 and take weeks. We deliver in 48h with AI-powered analysis covering GEO and AI search visibility - things most agencies don't even offer.</div>
         </div>
-        <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 24px;cursor:none;margin-top:8px">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <span style="font-size:15px;font-weight:600;color:var(--text)">Do you accept crypto?</span>
-            <span class="faq-arrow" style="color:var(--accent);font-size:18px;transition:transform .2s">+</span>
+        <div class="faq-item">
+          <div class="faq-trigger" onclick="toggleFaq(this.parentElement)">
+            <span class="faq-q">Do you accept crypto?</span>
+            <span class="faq-icon">+</span>
           </div>
-          <div class="faq-body" style="display:none;margin-top:12px;font-size:14px;color:var(--text2);line-height:1.6">Yes. We accept USDT, ETH, and BTC. Fast, no middlemen, no bank friction. Perfect for web3 companies and international clients.</div>
+          <div class="faq-body">Yes. USDT, ETH, and BTC accepted. Fast, no middlemen, no bank friction. Perfect for web3 companies and international clients.</div>
         </div>
       </div>
     </div>
@@ -636,19 +696,14 @@ footer{border-top:1px solid var(--border);padding:36px 48px;display:flex;align-i
   </div>
 </section>
 
-<!-- STICKY MOBILE CTA -->
-<div id="sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;padding:14px 20px;background:rgba(10,15,20,.95);border-top:1px solid var(--border);backdrop-filter:blur(20px);z-index:90;text-align:center">
-  <a href="mailto:audit@seogeofix.com" class="btn-primary" style="width:100%;max-width:400px;justify-content:center;margin:0 auto">Run Free Audit →</a>
-</div>
-
 <!-- CTA -->
-<section class="cta-section">
+<section class="cta-sec">
   <div class="cta-glow"></div>
   <div class="cta-inner reveal">
-    <div class="section-label" style="justify-content:center">Get Started</div>
-    <h2>Ready to be found<br>everywhere?</h2>
-    <p>Send us your URL. We'll run a free 5-point mini audit and show exactly what's costing you traffic — before you spend a dollar.</p>
-    <a href="mailto:audit@seogeofix.com" class="btn-primary" style="font-size:17px;padding:16px 40px">Get Free Audit Report →</a>
+    <div class="slabel" style="justify-content:center">Get started</div>
+    <h2>Ready to get more<br>traffic from AI search?</h2>
+    <p>Send us your URL. We'll run a free 5-point mini audit and show exactly what's costing you rankings - before you spend a dollar.</p>
+    <a href="#" onclick="openForm();return false;" class="btn-primary" style="font-size:16px;padding:15px 36px;display:inline-flex">Analyze My Site →</a>
     <div class="cta-note">audit@seogeofix.com · No signup · Results in 48h · Crypto accepted</div>
   </div>
 </section>
@@ -657,11 +712,121 @@ footer{border-top:1px solid var(--border);padding:36px 48px;display:flex;align-i
 <footer>
   <div class="footer-left">© 2025 SeoGeoFix · <span style="color:var(--accent)">seogeofix.com</span></div>
   <div class="footer-right">
-    <a href="mailto:audit@seogeofix.com">audit@seogeofix.com</a>
-    <a href="https://linkedin.com/in/sergey-trach-design">LinkedIn</a>
-    <a href="https://behance.net/sergey_trach">Behance</a>
+    <a href="#" onclick="openForm();return false;">audit@seogeofix.com</a>
   </div>
 </footer>
+
+<!-- MODAL FORM -->
+<div id="form-modal" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px">
+  <div style="background:var(--bg2);border:1px solid var(--border2);border-radius:20px;width:100%;max-width:480px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6)">
+
+    <div style="padding:24px 28px 0;display:flex;align-items:center;justify-content:space-between">
+      <div>
+        <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Free Audit</div>
+        <h3 style="font-size:22px;font-weight:800;letter-spacing:-.03em;line-height:1.1">Get your free<br>audit report</h3>
+      </div>
+      <button onclick="closeForm()" style="background:var(--bg3);border:1px solid var(--border);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--text2);font-size:18px;line-height:1;font-weight:300">×</button>
+    </div>
+
+    <div style="padding:20px 28px 8px;font-size:13px;color:var(--text2)">We'll scan your site and send a detailed report within 48 hours. No spam, no sales calls.</div>
+
+    <form id="audit-form" onsubmit="submitForm(event)" style="padding:8px 28px 28px;display:flex;flex-direction:column;gap:14px">
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div>
+          <label style="font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:6px">First name</label>
+          <input type="text" id="f-name" required placeholder="John" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
+        </div>
+        <div>
+          <label style="font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:6px">Last name</label>
+          <input type="text" id="f-last" required placeholder="Smith" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
+        </div>
+      </div>
+
+      <div>
+        <label style="font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:6px">Email address</label>
+        <input type="email" id="f-email" required placeholder="john@company.com" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
+      </div>
+
+      <div>
+        <label style="font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:6px">Website URL</label>
+        <input type="url" id="f-url" required placeholder="https://yoursite.com" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
+      </div>
+
+      <button type="submit" id="f-btn" style="background:var(--accent);color:#000;border:none;border-radius:8px;padding:13px;font-size:15px;font-weight:700;font-family:'Inter',sans-serif;transition:all .2s;margin-top:4px">
+        Get My Free Audit Report →
+      </button>
+
+      <div id="f-success" style="display:none;text-align:center;padding:20px 16px;background:var(--adim);border:1px solid rgba(0,240,156,.2);border-radius:8px">
+        <div style="font-size:28px;margin-bottom:10px">✓</div>
+        <div style="font-size:16px;font-weight:700;color:var(--accent);margin-bottom:8px">Your site has been accepted for audit!</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.6">We will get in touch with you shortly at<br><strong style="color:var(--text)" id="f-email-confirm"></strong><br>with your full report.</div>
+      </div>
+
+      <div style="font-size:11px;color:var(--text3);text-align:center;font-family:'DM Mono',monospace">
+        No credit card · No spam · Crypto accepted
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script>
+function openForm(){
+  const m=document.getElementById('form-modal');
+  m.style.display='flex';
+  document.body.style.overflow='hidden';
+  setTimeout(()=>document.getElementById('f-name').focus(),100);
+}
+function closeForm(){
+  document.getElementById('form-modal').style.display='none';
+  document.body.style.overflow='';
+}
+document.getElementById('form-modal').addEventListener('click',function(e){
+  if(e.target===this)closeForm();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeForm()});
+
+async function submitForm(e){
+  e.preventDefault();
+  const btn=document.getElementById('f-btn');
+  const email=document.getElementById('f-email').value;
+
+  btn.textContent='Sending...';
+  btn.style.opacity='.7';
+  btn.disabled=true;
+
+  const data={
+    name: document.getElementById('f-name').value+' '+document.getElementById('f-last').value,
+    email: email,
+    website: document.getElementById('f-url').value
+  };
+
+  try {
+    const res=await fetch('https://formspree.io/f/xlgopaby',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(data)
+    });
+    if(res.ok){
+      document.getElementById('f-email-confirm').textContent=email;
+      document.getElementById('audit-form').querySelectorAll('input,button[type="submit"]').forEach(el=>el.style.display='none');
+      document.getElementById('f-success').style.display='block';
+    } else {
+      btn.textContent='Try again';
+      btn.style.opacity='1';
+      btn.disabled=false;
+    }
+  } catch(err){
+    btn.textContent='Try again';
+    btn.style.opacity='1';
+    btn.disabled=false;
+  }
+}
+</script>
+<div id="sticky">
+  <a href="#" onclick="openForm();return false;" class="btn-primary" style="width:100%;justify-content:center;display:flex">Analyze My Site →</a>
+</div>
 
 <script>
 // NAV
@@ -670,9 +835,9 @@ window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40)
 
 // REVEAL
 document.querySelectorAll('.reveal').forEach(el=>{
-  new IntersectionObserver((entries)=>{
+  new IntersectionObserver(entries=>{
     entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
-  },{threshold:0.08}).observe(el);
+  },{threshold:0.07}).observe(el);
 });
 
 // CURSOR
@@ -683,72 +848,65 @@ document.addEventListener('mousemove',e=>{
   ci.style.left=mx+'px';ci.style.top=my+'px';
   mg.style.left=mx+'px';mg.style.top=my+'px';
 });
-(function anim(){
-  ox+=(mx-ox)*.11;oy+=(my-oy)*.11;
-  co.style.left=ox+'px';co.style.top=oy+'px';
-  requestAnimationFrame(anim);
-})();
-document.querySelectorAll('a,button,.price-card,.solution-card,.problem-card,.process-step').forEach(el=>{
+(function a(){ox+=(mx-ox)*.1;oy+=(my-oy)*.1;co.style.left=ox+'px';co.style.top=oy+'px';requestAnimationFrame(a)})();
+document.querySelectorAll('a,button,.pc,.why-card,.faq-item,.hiw-step').forEach(el=>{
   el.addEventListener('mouseenter',()=>co.classList.add('h'));
   el.addEventListener('mouseleave',()=>co.classList.remove('h'));
 });
-document.addEventListener('mousedown',()=>{co.classList.add('c');ci.style.transform='translate(-50%,-50%) scale(.6)'});
+document.addEventListener('mousedown',()=>{co.classList.add('c');ci.style.transform='translate(-50%,-50%) scale(.55)'});
 document.addEventListener('mouseup',()=>{co.classList.remove('c');ci.style.transform='translate(-50%,-50%) scale(1)'});
-document.addEventListener('mouseleave',()=>{co.style.opacity='0';ci.style.opacity='0';mg.style.opacity='0'});
-document.addEventListener('mouseenter',()=>{co.style.opacity='1';ci.style.opacity='1';mg.style.opacity='1'});
+document.addEventListener('mouseleave',()=>{co.style.opacity='0';ci.style.opacity='0'});
+document.addEventListener('mouseenter',()=>{co.style.opacity='1';ci.style.opacity='1'});
 
 // 3D TILT
-document.querySelectorAll('.price-card,.solution-card').forEach(card=>{
+document.querySelectorAll('.pc,.why-card').forEach(card=>{
   card.addEventListener('mousemove',e=>{
     const r=card.getBoundingClientRect();
     const x=e.clientX-r.left,y=e.clientY-r.top;
-    card.style.transform=`perspective(900px) rotateX(${((y-r.height/2)/r.height)*-5}deg) rotateY(${((x-r.width/2)/r.width)*5}deg) translateY(-4px)`;
+    card.style.transform=`perspective(800px) rotateX(${((y-r.height/2)/r.height)*-4}deg) rotateY(${((x-r.width/2)/r.width)*4}deg) translateY(-3px)`;
   });
-  card.addEventListener('mouseleave',()=>card.style.transform='');
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform=card.classList.contains('feat')?'scale(1.03)':'';
+  });
+});
+
+// HERO GLOW
+const heroEl=document.querySelector('.hero'),g1=document.querySelector('.hero-glow-1');
+heroEl&&heroEl.addEventListener('mousemove',e=>{
+  const r=heroEl.getBoundingClientRect();
+  g1.style.left=((e.clientX-r.left)/r.width*100-25)+'%';
+  g1.style.top=((e.clientY-r.top)/r.height*100-30)+'%';
+  g1.style.transition='left .5s ease,top .5s ease';
 });
 
 // BILLING TOGGLE
-let isMonthly=false;
+let monthly=false;
 function toggleBilling(){
-  isMonthly=!isMonthly;
-  const thumb=document.getElementById('toggle-thumb');
-  const ot=document.getElementById('toggle-onetime');
-  const mo=document.getElementById('toggle-monthly');
-  thumb.style.transform=isMonthly?'translateX(22px)':'translateX(0)';
-  ot.style.color=isMonthly?'var(--text2)':'var(--text)';
-  mo.style.color=isMonthly?'var(--text)':'var(--text2)';
-  document.getElementById('growth-price').textContent=isMonthly?'$63':'$79';
-  document.getElementById('pro-price').textContent=isMonthly?'$199':'$249';
+  monthly=!monthly;
+  document.getElementById('toggle-thumb').style.transform=monthly?'translateX(22px)':'translateX(0)';
+  document.getElementById('tl-once').style.color=monthly?'var(--text2)':'var(--text)';
+  document.getElementById('tl-monthly').style.color=monthly?'var(--text)':'var(--text2)';
+  document.getElementById('price-growth').textContent=monthly?'$63':'$79';
+  document.getElementById('price-pro').textContent=monthly?'$199':'$249';
 }
 
 // FAQ
 function toggleFaq(el){
   const body=el.querySelector('.faq-body');
-  const arrow=el.querySelector('.faq-arrow');
-  const isOpen=body.style.display==='block';
+  const isOpen=el.classList.contains('open');
+  el.classList.toggle('open',!isOpen);
   body.style.display=isOpen?'none':'block';
-  arrow.textContent=isOpen?'+':'−';
 }
 
-// STICKY MOBILE CTA
-const stickyCta=document.getElementById('sticky-cta');
-if(window.innerWidth<=640){
-  stickyCta.style.display='block';
+// MOBILE STICKY — hide when pricing visible
+const sticky=document.getElementById('sticky');
+const pricingSec=document.getElementById('pricing');
+if(window.innerWidth<=640&&sticky&&pricingSec){
   window.addEventListener('scroll',()=>{
-    const pricing=document.getElementById('pricing');
-    const rect=pricing.getBoundingClientRect();
-    stickyCta.style.display=rect.top<window.innerHeight?'none':'block';
+    const r=pricingSec.getBoundingClientRect();
+    sticky.style.display=r.top<window.innerHeight&&r.bottom>0?'none':'block';
   });
 }
-
-// HERO GLOW
-const hero=document.querySelector('.hero'),g1=document.querySelector('.hero-bg-glow.g1');
-hero&&hero.addEventListener('mousemove',e=>{
-  const r=hero.getBoundingClientRect();
-  g1.style.left=((e.clientX-r.left)/r.width*100-20)+'%';
-  g1.style.top=((e.clientY-r.top)/r.height*100-30)+'%';
-  g1.style.transition='left .4s ease,top .4s ease';
-});
 </script>
 </body>
 </html>
