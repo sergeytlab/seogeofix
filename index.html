@@ -443,36 +443,203 @@ footer{border-top:1px solid var(--border);padding:36px 48px;display:flex;align-i
 </section>
 
 <!-- PRICING -->
-<section id="pricing">
+<section id="pricing" style="padding:120px 48px">
   <div class="section-inner">
     <div class="section-label">Pricing</div>
-    <h2>Simple pricing.<br>No agency markup.</h2>
-    <p class="section-sub">Flat rates. Fast delivery. Crypto-friendly.</p>
-    <div class="pricing-grid reveal">
-      <div class="price-card">
-        <div class="price-tag">Starter</div>
-        <div class="price-amount">$49</div>
-        <div class="price-name">Quick Audit</div>
-        <div class="price-desc">A fast technical report showing what's hurting your visibility. Perfect first step.</div>
-        <ul class="price-features"><li>PageSpeed analysis</li><li>Technical SEO check</li><li>GEO signal review</li><li>5–10 prioritized issues</li><li>PDF report in 48h</li><li>Crypto payment accepted</li></ul>
+    <h2>Simple pricing.<br>Clear results.</h2>
+    <p class="section-sub">No contracts. No hidden fees. Cancel anytime.</p>
+
+    <!-- TOGGLE -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:48px">
+      <span id="toggle-onetime" style="font-size:14px;font-weight:600;color:var(--text);font-family:'DM Mono',monospace">One-time</span>
+      <div id="billing-toggle" onclick="toggleBilling()" style="width:48px;height:26px;background:var(--accent-dim2);border:1px solid rgba(0,245,160,.3);border-radius:100px;position:relative;cursor:none;transition:background .2s;flex-shrink:0">
+        <div id="toggle-thumb" style="position:absolute;top:4px;left:4px;width:18px;height:18px;background:var(--accent);border-radius:50%;transition:transform .2s"></div>
       </div>
-      <div class="price-card featured">
-        <div class="price-tag">Most Popular</div>
-        <div class="price-amount">$299</div>
-        <div class="price-name">Full Audit + Fix</div>
-        <div class="price-desc">Complete SEO &amp; GEO audit — plus we implement all fixes. Measurable results in weeks.</div>
-        <ul class="price-features"><li>Full technical SEO audit</li><li>GEO &amp; AI search optimization</li><li>Schema markup implementation</li><li>Speed &amp; performance fixes</li><li>Sitemap, robots.txt, canonicals</li><li>Open Graph &amp; Twitter Card</li><li>Delivered in 3–5 days</li></ul>
+      <span id="toggle-monthly" style="font-size:14px;font-weight:500;color:var(--text2);font-family:'DM Mono',monospace">Monthly</span>
+      <span style="font-size:11px;background:rgba(0,245,160,.1);color:var(--accent);padding:3px 8px;border-radius:4px;font-family:'DM Mono',monospace;font-weight:600">Save 20%</span>
+    </div>
+
+    <!-- CARDS -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start" class="reveal">
+
+      <!-- FREE -->
+      <div class="price-card" style="padding:36px">
+        <div class="price-tag" style="background:rgba(107,122,141,.1);color:var(--text2);border-color:rgba(107,122,141,.2)">Free</div>
+        <div class="price-amount" style="margin-top:8px">$0</div>
+        <div class="price-name">Free Audit</div>
+        <div class="price-desc">Start here. See your biggest issues instantly — no signup needed.</div>
+        <a href="mailto:audit@seogeofix.com" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;background:transparent;border:1px solid var(--border2);color:var(--text2)">Run Free Audit →</a>
+        <div style="font-size:11px;color:var(--text3);text-align:center;font-family:'DM Mono',monospace;margin-bottom:24px">No signup required</div>
+        <ul class="price-features">
+          <li>Basic SEO scan</li>
+          <li>Indexing &amp; crawl issues</li>
+          <li>AI visibility check</li>
+          <li style="color:var(--text3);text-decoration:line-through">Full report preview</li>
+          <li style="color:var(--text3);text-decoration:line-through">Competitor insights</li>
+          <li style="color:var(--text3);text-decoration:line-through">Fix roadmap</li>
+        </ul>
       </div>
-      <div class="price-card">
-        <div class="price-tag">Ongoing</div>
-        <div class="price-amount">$399<span class="price-period">/mo</span></div>
-        <div class="price-name">Monthly SEO</div>
-        <div class="price-desc">Continuous optimization. Stay ahead of algorithm and AI search changes.</div>
-        <ul class="price-features"><li>Monthly audit &amp; updates</li><li>Content optimization</li><li>AI search monitoring</li><li>Performance reporting</li><li>Priority response</li></ul>
+
+      <!-- GROWTH — FEATURED -->
+      <div class="price-card featured" style="padding:36px 36px 36px;transform:scale(1.04);position:relative;overflow:visible">
+        <div style="display:inline-block;background:var(--accent);color:#000;font-size:11px;font-weight:700;padding:5px 14px;border-radius:100px;white-space:nowrap;font-family:'DM Mono',monospace;letter-spacing:.06em;margin-bottom:16px">⭐ MOST POPULAR</div>
+        <div class="price-tag">Growth</div>
+        <div class="price-amount" id="growth-price" style="margin-top:8px">$79</div>
+        <div class="price-name">Growth Audit</div>
+        <div class="price-desc">Full SEO + GEO audit. See exactly what's blocking your rankings.</div>
+        <a href="mailto:audit@seogeofix.com" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:10px">Get Full Report →</a>
+        <div style="font-size:11px;color:var(--accent);text-align:center;font-family:'DM Mono',monospace;margin-bottom:24px;opacity:.8">Fixing 1 issue can increase traffic 20%+</div>
+        <ul class="price-features">
+          <li>Full SEO + GEO audit</li>
+          <li>AI search optimization analysis</li>
+          <li>100+ issues detected</li>
+          <li>Priority fix roadmap</li>
+          <li>Competitor insights</li>
+          <li>Downloadable report</li>
+        </ul>
+      </div>
+
+      <!-- PRO -->
+      <div class="price-card" style="padding:36px">
+        <div class="price-tag" style="background:rgba(167,139,250,.08);color:#a78bfa;border-color:rgba(167,139,250,.2)">Pro</div>
+        <div class="price-amount" id="pro-price" style="margin-top:8px">$249</div>
+        <div class="price-name">Pro Optimization</div>
+        <div class="price-desc">For SaaS, agencies &amp; serious growth. Full implementation included.</div>
+        <a href="mailto:audit@seogeofix.com" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:10px;background:#a78bfa;color:#000">Scale My SEO →</a>
+        <div style="font-size:11px;color:var(--text3);text-align:center;font-family:'DM Mono',monospace;margin-bottom:24px">Best for SaaS, agencies &amp; serious growth</div>
+        <ul class="price-features">
+          <li>Everything in Growth</li>
+          <li>AI visibility optimization</li>
+          <li>GEO entity optimization</li>
+          <li>Continuous monitoring</li>
+          <li>Weekly updates</li>
+          <li>Priority support</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- VALUE ANCHOR -->
+    <div style="text-align:center;margin-top:40px;padding:24px;background:var(--accent-dim);border:1px solid rgba(0,245,160,.15);border-radius:12px" class="reveal">
+      <p style="font-size:15px;color:var(--text2)">SEO audits typically cost <span style="color:var(--text);font-weight:600;text-decoration:line-through">$500–$5,000</span> at agencies.</p>
+      <p style="font-size:17px;color:var(--accent);font-weight:700;margin-top:4px">Get actionable insights starting at $79 — delivered in 48h.</p>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div style="margin-top:60px;overflow-x:auto" class="reveal">
+      <table style="width:100%;border-collapse:collapse;font-size:14px">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:14px 20px;color:var(--text2);font-weight:500;font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--border)">Features</th>
+            <th style="text-align:center;padding:14px 20px;color:var(--text2);font-weight:600;border-bottom:1px solid var(--border)">Free</th>
+            <th style="text-align:center;padding:14px 20px;color:var(--accent);font-weight:700;border-bottom:1px solid var(--border);background:rgba(0,245,160,.03)">Growth</th>
+            <th style="text-align:center;padding:14px 20px;color:#a78bfa;font-weight:600;border-bottom:1px solid var(--border)">Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:14px 20px;color:var(--text2)">SEO audit</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:14px 20px;color:var(--text2)">Technical issues</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:14px 20px;color:var(--text2)">GEO optimization</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:14px 20px;color:var(--text2)">AI visibility</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--text2);font-size:12px">Basic</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:14px 20px;color:var(--text2)">Competitor analysis</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:14px 20px;color:var(--text2)">Fix roadmap</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent);background:rgba(0,245,160,.03)">✓</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:14px 20px;color:var(--text2)">Monitoring</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--text3);background:rgba(0,245,160,.03)">✗</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+          </tr>
+          <tr>
+            <td style="padding:14px 20px;color:var(--text2)">Priority support</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--text3)">✗</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--text3);background:rgba(0,245,160,.03)">✗</td>
+            <td style="text-align:center;padding:14px 20px;color:var(--accent)">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TRUST BADGES -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:40px;padding:24px;border:1px solid var(--border);border-radius:12px" class="reveal">
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> No credit card required</div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> Instant results</div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> Cancel anytime</div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> 30-day money-back guarantee</div>
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)"><span style="color:var(--accent)">✓</span> Crypto accepted</div>
+    </div>
+
+    <!-- FAQ -->
+    <div style="margin-top:60px" class="reveal">
+      <h3 style="font-size:24px;font-weight:700;letter-spacing:-.02em;margin-bottom:24px;text-align:center">Frequently asked questions</h3>
+      <div style="display:flex;flex-direction:column;gap:2px">
+        <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 24px;cursor:none">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:15px;font-weight:600;color:var(--text)">How fast do I get results?</span>
+            <span class="faq-arrow" style="color:var(--accent);font-size:18px;transition:transform .2s">+</span>
+          </div>
+          <div class="faq-body" style="display:none;margin-top:12px;font-size:14px;color:var(--text2);line-height:1.6">Instant audit preview — you'll see your top issues right away. Full detailed report delivered within 48 hours. Fixes can be applied the same day on Pro plan.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 24px;cursor:none;margin-top:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:15px;font-weight:600;color:var(--text)">Do I need technical knowledge?</span>
+            <span class="faq-arrow" style="color:var(--accent);font-size:18px;transition:transform .2s">+</span>
+          </div>
+          <div class="faq-body" style="display:none;margin-top:12px;font-size:14px;color:var(--text2);line-height:1.6">No. We show exactly what to fix, in plain language, with step-by-step instructions. On Pro plan, we handle all technical implementation for you.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 24px;cursor:none;margin-top:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:15px;font-weight:600;color:var(--text)">Is this better than an SEO agency?</span>
+            <span class="faq-arrow" style="color:var(--accent);font-size:18px;transition:transform .2s">+</span>
+          </div>
+          <div class="faq-body" style="display:none;margin-top:12px;font-size:14px;color:var(--text2);line-height:1.6">Faster, cheaper, and data-driven. Agencies charge $500–$5,000 for audits that take weeks. We deliver in 48 hours with AI-powered analysis that covers GEO and AI search visibility — things most agencies don't even offer.</div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)" style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 24px;cursor:none;margin-top:8px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:15px;font-weight:600;color:var(--text)">Do you accept crypto?</span>
+            <span class="faq-arrow" style="color:var(--accent);font-size:18px;transition:transform .2s">+</span>
+          </div>
+          <div class="faq-body" style="display:none;margin-top:12px;font-size:14px;color:var(--text2);line-height:1.6">Yes. We accept USDT, ETH, and BTC. Fast, no middlemen, no bank friction. Perfect for web3 companies and international clients.</div>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
+
+<!-- STICKY MOBILE CTA -->
+<div id="sticky-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;padding:14px 20px;background:rgba(10,15,20,.95);border-top:1px solid var(--border);backdrop-filter:blur(20px);z-index:90;text-align:center">
+  <a href="mailto:audit@seogeofix.com" class="btn-primary" style="width:100%;max-width:400px;justify-content:center;margin:0 auto">Run Free Audit →</a>
+</div>
 
 <!-- CTA -->
 <section class="cta-section">
@@ -539,6 +706,40 @@ document.querySelectorAll('.price-card,.solution-card').forEach(card=>{
   });
   card.addEventListener('mouseleave',()=>card.style.transform='');
 });
+
+// BILLING TOGGLE
+let isMonthly=false;
+function toggleBilling(){
+  isMonthly=!isMonthly;
+  const thumb=document.getElementById('toggle-thumb');
+  const ot=document.getElementById('toggle-onetime');
+  const mo=document.getElementById('toggle-monthly');
+  thumb.style.transform=isMonthly?'translateX(22px)':'translateX(0)';
+  ot.style.color=isMonthly?'var(--text2)':'var(--text)';
+  mo.style.color=isMonthly?'var(--text)':'var(--text2)';
+  document.getElementById('growth-price').textContent=isMonthly?'$63':'$79';
+  document.getElementById('pro-price').textContent=isMonthly?'$199':'$249';
+}
+
+// FAQ
+function toggleFaq(el){
+  const body=el.querySelector('.faq-body');
+  const arrow=el.querySelector('.faq-arrow');
+  const isOpen=body.style.display==='block';
+  body.style.display=isOpen?'none':'block';
+  arrow.textContent=isOpen?'+':'−';
+}
+
+// STICKY MOBILE CTA
+const stickyCta=document.getElementById('sticky-cta');
+if(window.innerWidth<=640){
+  stickyCta.style.display='block';
+  window.addEventListener('scroll',()=>{
+    const pricing=document.getElementById('pricing');
+    const rect=pricing.getBoundingClientRect();
+    stickyCta.style.display=rect.top<window.innerHeight?'none':'block';
+  });
+}
 
 // HERO GLOW
 const hero=document.querySelector('.hero'),g1=document.querySelector('.hero-bg-glow.g1');
