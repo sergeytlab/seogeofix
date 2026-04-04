@@ -9,6 +9,7 @@
 <meta property="og:url" content="https://seogeofix.com">
 <meta name="twitter:card" content="summary_large_image">
 <title>SeoGeoFix — Get More Traffic from Google & AI Search</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%2300f09c'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Mono:ital,wght@0,300;0,400;0,500&display=swap" rel="stylesheet">
 <style>
@@ -733,34 +734,22 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
     <form id="audit-form" onsubmit="submitForm(event)" style="padding:8px 28px 28px;display:flex;flex-direction:column;gap:14px">
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-        <div>
-          <label style="font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:6px">First name</label>
-          <input type="text" id="f-name" required placeholder="John" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
-        </div>
-        <div>
-          <label style="font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:6px">Last name</label>
-          <input type="text" id="f-last" required placeholder="Smith" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
-        </div>
+        <input type="text" id="f-name" required placeholder="First name" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
+        <input type="text" id="f-last" required placeholder="Last name" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
       </div>
 
-      <div>
-        <label style="font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:6px">Email address</label>
-        <input type="email" id="f-email" required placeholder="john@company.com" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
-      </div>
+      <input type="email" id="f-email" required placeholder="Email address" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
 
-      <div>
-        <label style="font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:6px">Website URL</label>
-        <input type="url" id="f-url" required placeholder="https://yoursite.com" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
-      </div>
+      <input type="url" id="f-url" required placeholder="Website URL (https://yoursite.com)" style="width:100%;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'Inter',sans-serif;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(0,240,156,.4)'" onblur="this.style.borderColor='var(--border2)'">
 
       <button type="submit" id="f-btn" style="background:var(--accent);color:#000;border:none;border-radius:8px;padding:13px;font-size:15px;font-weight:700;font-family:'Inter',sans-serif;transition:all .2s;margin-top:4px">
         Get My Free Audit Report →
       </button>
 
-      <div id="f-success" style="display:none;text-align:center;padding:20px 16px;background:var(--adim);border:1px solid rgba(0,240,156,.2);border-radius:8px">
-        <div style="font-size:28px;margin-bottom:10px">✓</div>
+      <div id="f-success" style="display:none;text-align:center;padding:24px 16px;background:var(--adim);border:1px solid rgba(0,240,156,.2);border-radius:8px">
+        <div style="font-size:32px;margin-bottom:10px">✓</div>
         <div style="font-size:16px;font-weight:700;color:var(--accent);margin-bottom:8px">Your site has been accepted for audit!</div>
-        <div style="font-size:13px;color:var(--text2);line-height:1.6">We will get in touch with you shortly at<br><strong style="color:var(--text)" id="f-email-confirm"></strong><br>with your full report.</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.6">We will get in touch with you shortly<br>with your full report.</div>
       </div>
 
       <div style="font-size:11px;color:var(--text3);text-align:center;font-family:'DM Mono',monospace">
@@ -809,7 +798,6 @@ async function submitForm(e){
       body:JSON.stringify(data)
     });
     if(res.ok){
-      document.getElementById('f-email-confirm').textContent=email;
       document.getElementById('audit-form').querySelectorAll('input,button[type="submit"]').forEach(el=>el.style.display='none');
       document.getElementById('f-success').style.display='block';
     } else {
