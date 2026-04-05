@@ -597,7 +597,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
         <div class="pc-price">$0</div>
         <div class="pc-name">Free Audit</div>
         <div class="pc-desc">Start here. See your biggest issues instantly - no signup needed.</div>
-        <a href="#" onclick="openForm();return false;" class="pc-cta pc-cta-ghost">Run Free Audit →</a>
+        <a href="#" onclick="openForm('Free');return false;" class="pc-cta pc-cta-ghost">Run Free Audit →</a>
         <div class="pc-micro">No signup required</div>
         <ul class="pc-features">
           <li>Basic SEO scan</li>
@@ -615,7 +615,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
         <div class="pc-price" id="price-growth">$79</div>
         <div class="pc-name">Growth Audit</div>
         <div class="pc-desc">Full SEO + GEO audit. See exactly what's blocking your rankings.</div>
-        <a href="#" onclick="openForm();return false;" class="pc-cta pc-cta-primary">Get Full Report →</a>
+        <a href="#" onclick="openForm('Growth');return false;" class="pc-cta pc-cta-primary">Get Full Report →</a>
         <div class="pc-micro" style="color:var(--accent);opacity:.85">Fixing 1 issue can lift traffic 20%+</div>
         <ul class="pc-features">
           <li>Full SEO + GEO audit</li>
@@ -632,7 +632,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
         <div class="pc-price" id="price-pro">$249</div>
         <div class="pc-name">Pro Optimization</div>
         <div class="pc-desc">Full implementation included. For SaaS, agencies &amp; serious growth.</div>
-        <a href="#" onclick="openForm();return false;" class="pc-cta pc-cta-pro">Scale My SEO →</a>
+        <a href="#" onclick="openForm('Pro');return false;" class="pc-cta pc-cta-pro">Scale My SEO →</a>
         <div class="pc-micro">Best for SaaS &amp; agencies</div>
         <ul class="pc-features">
           <li>Everything in Growth</li>
@@ -785,7 +785,9 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
 </div>
 
 <script>
-function openForm(){
+var selectedPlan='';
+function openForm(plan){
+  selectedPlan=plan||'';
   const m=document.getElementById('form-modal');
   m.style.display='flex';
   document.body.style.overflow='hidden';
@@ -809,10 +811,15 @@ async function submitForm(e){
   btn.style.opacity='.7';
   btn.disabled=true;
 
+  const billing=monthly?'Monthly':'One-time';
+  const price=selectedPlan==='Growth'?(monthly?'$63':'$79'):selectedPlan==='Pro'?(monthly?'$199':'$249'):'$0';
   const data={
     name: document.getElementById('f-name').value+' '+document.getElementById('f-last').value,
     email: email,
-    website: document.getElementById('f-url').value
+    website: document.getElementById('f-url').value,
+    plan: selectedPlan||'Free',
+    billing: billing,
+    price: price
   };
 
   try {
