@@ -772,8 +772,8 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
 
       <div id="f-success" style="display:none;text-align:center;padding:24px 16px;background:var(--adim);border:1px solid rgba(0,240,156,.2);border-radius:8px">
         <div style="font-size:32px;margin-bottom:10px">✓</div>
-        <div style="font-size:16px;font-weight:700;color:var(--accent);margin-bottom:8px">Your site has been accepted for audit!</div>
-        <div style="font-size:13px;color:var(--text2);line-height:1.6">We will get in touch with you shortly<br>with your full report.</div>
+        <div id="f-success-title" style="font-size:16px;font-weight:700;color:var(--accent);margin-bottom:8px">Your site has been accepted for audit!</div>
+        <div id="f-success-desc" style="font-size:13px;color:var(--text2);line-height:1.6">We will get in touch with you shortly<br>with your full report.</div>
       </div>
 
       <div style="font-size:11px;color:var(--text3);text-align:center;font-family:'DM Mono',monospace">
@@ -852,6 +852,18 @@ async function submitForm(e){
     });
     if(res.ok){
       document.getElementById('audit-form').querySelectorAll('input,button[type="submit"]').forEach(el=>el.style.display='none');
+      var st=document.getElementById('f-success-title');
+      var sd=document.getElementById('f-success-desc');
+      if(selectedPlan==='Growth'){
+        st.textContent='Your Growth Audit is confirmed!';
+        sd.innerHTML='We will deliver your full SEO + GEO report<br>within 48 hours.';
+      }else if(selectedPlan==='Pro'){
+        st.textContent='Your Pro Optimization is confirmed!';
+        sd.innerHTML='Our team will reach out shortly<br>to begin implementation.';
+      }else{
+        st.textContent='Your site has been accepted for audit!';
+        sd.innerHTML='We will get in touch with you shortly<br>with your full report.';
+      }
       document.getElementById('f-success').style.display='block';
     } else {
       btn.textContent='Try again';
