@@ -285,6 +285,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
   .hero-right{order:-1}
   .why-grid,.pricing-grid{grid-template-columns:1fr}
   .pc.feat{transform:none}
+  .pc-pro{order:-1}
 }
 @media(max-width:640px){
   nav{padding:14px 20px}
@@ -581,15 +582,6 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
     <h2>Transparent pricing<br>for proven results.</h2>
     <p class="ssub">No contracts. No hidden fees. Cancel anytime.</p>
 
-    <div class="toggle-wrap">
-      <span class="toggle-label" id="tl-once" style="color:var(--text)">One-time</span>
-      <div class="toggle-track" id="toggle-track" onclick="toggleBilling()" style="width:48px;height:26px;background:var(--adim2);border:1px solid rgba(0,240,156,.25);border-radius:100px;position:relative;flex-shrink:0">
-        <div class="toggle-thumb" id="toggle-thumb" style="position:absolute;top:4px;left:4px;width:18px;height:18px;background:var(--accent);border-radius:50%;transition:transform .2s"></div>
-      </div>
-      <span class="toggle-label" id="tl-monthly" style="color:var(--text2)">Monthly</span>
-      <span class="toggle-save">Save 20%</span>
-    </div>
-
     <div class="pricing-grid reveal">
 
       <div class="pc">
@@ -612,43 +604,68 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
       <div class="pc feat" style="padding-top:52px">
         <div class="pc-pop" style="background:var(--accent);color:#000;font-size:10px;font-weight:700;padding:5px 16px;border-radius:6px;position:absolute;top:16px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:'DM Mono',monospace;letter-spacing:.06em">MOST POPULAR</div>
         <div class="pc-badge pcb-growth">Growth</div>
-        <div class="pc-price" id="price-growth">$79</div>
+        <div class="pc-price">$79</div>
         <div class="pc-name">Growth Audit</div>
         <div class="pc-desc">Full SEO + GEO audit. See exactly what's blocking your rankings.</div>
         <a href="#" onclick="openForm('Growth');return false;" class="pc-cta pc-cta-primary">Get Full Report →</a>
-        <div class="pc-micro" style="color:var(--accent);opacity:.85">Fixing 1 issue can lift traffic 20%+</div>
+        <div class="pc-micro" style="color:var(--accent);opacity:.85">One-time payment</div>
         <ul class="pc-features">
-          <li>Full SEO + GEO audit</li>
-          <li>AI search optimization</li>
-          <li>100+ issues detected</li>
-          <li>Priority fix roadmap</li>
-          <li>Competitor insights</li>
+          <li>GEO audit / AI search visibility analysis</li>
+          <li>10-15 critical issues identified</li>
+          <li>Priority roadmap</li>
+          <li>Competitor snapshot</li>
+          <li>Key growth opportunities</li>
+          <li>High-level fix guidance</li>
           <li>Downloadable PDF report</li>
         </ul>
       </div>
 
-      <div class="pc">
-        <div class="pc-badge pcb-pro">Pro</div>
-        <div class="pc-price" id="price-pro">$249</div>
-        <div class="pc-name">Pro Optimization</div>
-        <div class="pc-desc">Full implementation included. For SaaS, agencies &amp; serious growth.</div>
-        <a href="#" onclick="openForm('Pro');return false;" class="pc-cta pc-cta-pro">Scale My SEO →</a>
-        <div class="pc-micro">Best for SaaS &amp; agencies</div>
-        <ul class="pc-features">
-          <li>Everything in Growth</li>
-          <li>AI visibility strategy</li>
-          <li>GEO entity optimization</li>
-          <li>Continuous monitoring</li>
-          <li>Weekly updates</li>
-          <li>Priority support</li>
-        </ul>
+      <div class="pc pc-pro" id="pc-pro" style="border-color:rgba(167,139,250,.4);background:rgba(167,139,250,.06)">
+        <div id="pro-rec-badge" class="pc-pop" style="background:var(--purple);color:#fff;font-size:10px;font-weight:700;padding:5px 16px;border-radius:6px;position:absolute;top:16px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:'DM Mono',monospace;letter-spacing:.06em">RECOMMENDED</div>
+        <div style="padding-top:20px">
+          <div class="pc-badge pcb-pro">Pro</div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;justify-content:center">
+            <span id="pro-tl-once" style="font-size:12px;font-family:'DM Mono',monospace;cursor:pointer;color:var(--text3);transition:color .2s" onclick="setProBilling(false)">One-time</span>
+            <div style="width:40px;height:22px;background:var(--adim2);border:1px solid rgba(167,139,250,.3);border-radius:100px;position:relative;flex-shrink:0;cursor:pointer" onclick="setProBilling(!isMonthly)">
+              <div id="pro-toggle-thumb" style="position:absolute;top:3px;left:3px;width:16px;height:16px;background:var(--purple);border-radius:50%;transition:transform .2s;transform:translateX(18px)"></div>
+            </div>
+            <span id="pro-tl-monthly" style="font-size:12px;font-family:'DM Mono',monospace;cursor:pointer;color:var(--text);transition:color .2s" onclick="setProBilling(true)">Monthly</span>
+            <span id="pro-rec-label" style="font-size:9px;font-family:'DM Mono',monospace;color:var(--purple);background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.2);padding:2px 8px;border-radius:100px;letter-spacing:.06em">RECOMMENDED</span>
+          </div>
+          <div class="pc-price" id="price-pro">$399<span class="pc-period">/mo</span></div>
+          <div class="pc-name">Pro Optimization</div>
+          <div class="pc-desc" id="pro-desc">We don't just fix it - we keep it optimized. Continuous improvements for Google &amp; AI search.</div>
+          <a href="#" onclick="openForm('Pro');return false;" class="pc-cta pc-cta-pro" id="pro-cta">Scale My SEO →</a>
+          <div class="pc-micro" id="pro-micro">Ongoing optimization · cancel anytime</div>
+          <ul class="pc-features">
+            <li>Everything in Growth</li>
+            <li>Full technical implementation</li>
+            <li>Core Web Vitals &amp; PageSpeed optimization</li>
+            <li>Schema markup setup (FAQ, structured data)</li>
+            <li>Indexing fixes (Google + Brave)</li>
+            <li>AI search visibility optimization</li>
+            <li>Entity &amp; topical authority setup</li>
+            <li>Content structuring for AI answers</li>
+            <li>Priority turnaround</li>
+            <li>Direct support</li>
+          </ul>
+          <div id="pro-monthly-features">
+            <div style="font-size:10px;font-family:'DM Mono',monospace;color:var(--purple);letter-spacing:.08em;text-transform:uppercase;margin:16px 0 10px;padding-top:12px;border-top:1px solid rgba(167,139,250,.15)">Monthly only</div>
+            <ul class="pc-features">
+              <li>Continuous monitoring</li>
+              <li>Monthly re-audits &amp; updates</li>
+              <li>Algorithm change adaptation</li>
+              <li>Ongoing GEO improvements</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
     </div>
 
-    <div class="value-anchor reveal">
-      <div class="va-muted">SEO audits at agencies typically cost <strong style="color:var(--text);text-decoration:line-through">$500-$5,000</strong></div>
-      <div class="va-main">Get actionable insights starting at $79 - delivered in 48h</div>
+    <div class="reveal" style="text-align:center;margin-top:36px;display:flex;flex-direction:column;gap:6px">
+      <div style="font-size:15px;color:var(--text2);line-height:1.6">Most audits give you data. We fix what's actually blocking your growth.</div>
+      <div style="font-size:15px;color:var(--text);font-weight:600;line-height:1.6">Growth shows you the problems. Pro solves them.</div>
     </div>
 
     <div style="overflow-x:auto;margin-top:48px" class="reveal">
@@ -793,17 +810,16 @@ function openForm(plan){
   var desc=document.getElementById('f-desc');
   var btn=document.getElementById('f-btn');
   if(plan==='Growth'){
-    var p=monthly?'$63/mo':'$79';
-    label.textContent='Growth Audit \u00B7 '+p;
+    label.textContent='Growth Audit \u00B7 $79';
     title.innerHTML='Get your full<br>SEO + GEO report';
     desc.textContent='Full audit covering 100+ SEO and GEO factors. Delivered within 48 hours.';
     btn.textContent='Get Full Report \u2192';
   }else if(plan==='Pro'){
-    var p=monthly?'$199/mo':'$249';
+    var p=isMonthly?'$399/mo':'$249';
     label.textContent='Pro Optimization \u00B7 '+p;
-    title.innerHTML='Scale your SEO<br>with full implementation';
-    desc.textContent='Complete audit + our team implements all fixes. For SaaS, agencies & serious growth.';
-    btn.textContent='Scale My SEO \u2192';
+    title.innerHTML=isMonthly?'Scale your SEO<br>with ongoing optimization':'Fix your site<br>with full implementation';
+    desc.textContent=isMonthly?"Continuous improvements for Google & AI search. Cancel anytime.":"Complete audit + our team implements all fixes.";
+    btn.textContent=isMonthly?'Scale My SEO \u2192':'Fix My Site \u2192';
   }else{
     label.textContent='Free Audit';
     title.innerHTML='Get your free<br>audit report';
@@ -833,8 +849,8 @@ async function submitForm(e){
   btn.style.opacity='.7';
   btn.disabled=true;
 
-  const billing=monthly?'Monthly':'One-time';
-  const price=selectedPlan==='Growth'?(monthly?'$63':'$79'):selectedPlan==='Pro'?(monthly?'$199':'$249'):'$0';
+  const billing=selectedPlan==='Pro'?(isMonthly?'Monthly':'One-time'):'One-time';
+  const price=selectedPlan==='Growth'?'$79':selectedPlan==='Pro'?(isMonthly?'$399/mo':'$249'):'$0';
   const data={
     name: document.getElementById('f-name').value+' '+document.getElementById('f-last').value,
     email: email,
@@ -947,15 +963,23 @@ if(heroEl){
   heroEl.addEventListener('mouseleave',()=>{heroRect=null});
 }
 // BILLING TOGGLE
-let monthly=false;
-function toggleBilling(){
-  monthly=!monthly;
-  document.getElementById('toggle-thumb').style.transform=monthly?'translateX(22px)':'translateX(0)';
-  document.getElementById('tl-once').style.color=monthly?'var(--text2)':'var(--text)';
-  document.getElementById('tl-monthly').style.color=monthly?'var(--text)':'var(--text2)';
-  document.getElementById('price-growth').textContent=monthly?'$63':'$79';
-  document.getElementById('price-pro').textContent=monthly?'$199':'$249';
+let monthly=true;
+var isMonthly=true;
+function setProBilling(m){
+  isMonthly=m;
+  monthly=m;
+  document.getElementById('pro-toggle-thumb').style.transform=m?'translateX(18px)':'translateX(0)';
+  document.getElementById('pro-tl-once').style.color=m?'var(--text3)':'var(--text)';
+  document.getElementById('pro-tl-monthly').style.color=m?'var(--text)':'var(--text3)';
+  document.getElementById('price-pro').innerHTML=m?'$399<span class="pc-period">/mo</span>':'$249';
+  document.getElementById('pro-desc').textContent=m?"We don't just fix it - we keep it optimized. Continuous improvements for Google & AI search.":"We fix what's broken. Complete audit + full implementation.";
+  document.getElementById('pro-cta').textContent=m?'Scale My SEO \u2192':'Fix My Site \u2192';
+  document.getElementById('pro-micro').textContent=m?'Ongoing optimization \u00B7 cancel anytime':'One-time \u00B7 no subscription';
+  document.getElementById('pro-monthly-features').style.display=m?'block':'none';
+  document.getElementById('pro-rec-badge').style.display=m?'block':'none';
+  document.getElementById('pro-rec-label').style.display=m?'inline':'none';
 }
+function toggleBilling(){setProBilling(!isMonthly)}
 
 // FAQ
 function toggleFaq(el){
