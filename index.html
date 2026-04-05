@@ -19,8 +19,10 @@
 <meta name="twitter:image" content="https://seogeofix.com/og-image.png">
 <title>SeoGeoFix — Get More Traffic from Google & AI Search</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%2300f09c'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Mono:ital,wght@0,300;0,400;0,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Mono:ital,wght@0,300;0,400;0,500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Mono:ital,wght@0,300;0,400;0,500&display=swap" rel="stylesheet"></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -37,12 +39,12 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 
 
 /* CURSOR */
-#co{position:fixed;width:32px;height:32px;border:1.5px solid rgba(0,240,156,.4);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s,background .2s,opacity .3s}
-#ci{position:fixed;width:5px;height:5px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:transform .1s,opacity .3s}
+#co{position:fixed;top:0;left:0;width:32px;height:32px;border:1.5px solid rgba(0,240,156,.4);border-radius:50%;pointer-events:none;z-index:99999;will-change:transform;transition:width .2s,height .2s,border-color .2s,background .2s,opacity .3s}
+#ci{position:fixed;top:0;left:0;width:5px;height:5px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:99999;will-change:transform;transition:opacity .3s}
 #co.h{width:48px;height:48px;border-color:var(--accent);background:rgba(0,240,156,.05)}
 #co.c{width:24px;height:24px;background:rgba(0,240,156,.1)}
 @media(pointer:coarse){#co,#ci,#mg{display:none!important}}
-#mg{position:fixed;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,240,156,.03) 0%,transparent 60%);pointer-events:none;z-index:0;transform:translate(-50%,-50%)}
+#mg{position:fixed;top:0;left:0;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,240,156,.03) 0%,transparent 60%);pointer-events:none;z-index:0;will-change:transform}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 48px;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
@@ -839,7 +841,7 @@ async function submitForm(e){
 <script>
 // NAV
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
 
 // REVEAL
 document.querySelectorAll('.reveal').forEach(el=>{
@@ -848,15 +850,15 @@ document.querySelectorAll('.reveal').forEach(el=>{
   },{threshold:0.07}).observe(el);
 });
 
-// CURSOR
+// CURSOR — uses transform to avoid forced layout/reflow
 const co=document.getElementById('co'),ci=document.getElementById('ci'),mg=document.getElementById('mg');
 let mx=0,my=0,ox=0,oy=0;
 document.addEventListener('mousemove',e=>{
   mx=e.clientX;my=e.clientY;
-  ci.style.left=mx+'px';ci.style.top=my+'px';
-  mg.style.left=mx+'px';mg.style.top=my+'px';
-});
-(function a(){ox+=(mx-ox)*.1;oy+=(my-oy)*.1;co.style.left=ox+'px';co.style.top=oy+'px';requestAnimationFrame(a)})();
+  ci.style.transform='translate3d('+(mx-2.5)+'px,'+(my-2.5)+'px,0)';
+  mg.style.transform='translate3d('+(mx-350)+'px,'+(my-350)+'px,0)';
+},{passive:true});
+(function a(){ox+=(mx-ox)*.1;oy+=(my-oy)*.1;co.style.transform='translate3d('+(ox-16)+'px,'+(oy-16)+'px,0)';requestAnimationFrame(a)})();
 document.querySelectorAll('a,button,.pc,.why-card,.faq-item,.hiw-step').forEach(el=>{
   el.addEventListener('mouseenter',()=>co.classList.add('h'));
   el.addEventListener('mouseleave',()=>co.classList.remove('h'));
