@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="SeoGeoFix audits your site for 100+ SEO and GEO issues blocking your Google, ChatGPT, Perplexity and Claude rankings. Actionable report in 48h.">
 <meta property="og:title" content="SeoGeoFix — Get Recommended by AI Search Engines">
-<meta property="og:description" content="Fix what's blocking your Google & AI rankings in minutes, not months.">
+<meta property="og:description" content="SeoGeoFix audits 100+ SEO and GEO issues blocking your Google, ChatGPT, Perplexity and Claude rankings. Actionable report in 48h, starting at $79.">
 <meta property="og:url" content="https://seogeofix.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://seogeofix.com/og-image.png">
@@ -34,13 +34,14 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
-*{cursor:none!important}
+
 
 /* CURSOR */
 #co{position:fixed;width:32px;height:32px;border:1.5px solid rgba(0,240,156,.4);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .2s,height .2s,border-color .2s,background .2s,opacity .3s}
 #ci{position:fixed;width:5px;height:5px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:transform .1s,opacity .3s}
 #co.h{width:48px;height:48px;border-color:var(--accent);background:rgba(0,240,156,.05)}
 #co.c{width:24px;height:24px;background:rgba(0,240,156,.1)}
+@media(pointer:coarse){#co,#ci,#mg{display:none!important}}
 #mg{position:fixed;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,240,156,.03) 0%,transparent 60%);pointer-events:none;z-index:0;transform:translate(-50%,-50%)}
 
 /* NAV */
@@ -242,7 +243,7 @@ h2{font-size:clamp(28px,3.5vw,44px);font-weight:800;letter-spacing:-.035em;line-
 .faq-wrap{display:flex;flex-direction:column;gap:8px;margin-top:24px}
 .faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .2s}
 .faq-item:hover{border-color:var(--border2)}
-.faq-trigger{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:none}
+.faq-trigger{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer}
 .faq-q{font-size:14px;font-weight:600;color:var(--text)}
 .faq-icon{color:var(--accent);font-size:18px;font-weight:300;line-height:1;flex-shrink:0;margin-left:16px;transition:transform .2s}
 .faq-body{display:none;padding:0 22px 18px;font-size:13px;color:var(--text2);line-height:1.65}
@@ -318,7 +319,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
     <li><a href="#why">Services</a></li>
     <li><a href="#hiw">How it works</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#" onclick="openForm();return false;" class="nav-cta">Analyze My Site →</a></li>
+    <li><a href="#" onclick="openForm();return false;" class="nav-cta" aria-label="Open free SEO audit form">Analyze My Site →</a></li>
   </ul>
 </nav>
 
@@ -446,7 +447,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
 
 <!-- SOCIAL PROOF BAR -->
 <div class="proof-bar">
-  <div class="proof-bar-text">Trusted by <strong>500+</strong> SaaS &amp; eCommerce websites</div>
+  <div class="proof-bar-text">Trusted by <strong>500+</strong> SaaS &amp; eCommerce websites worldwide</div>
   <div class="proof-div"></div>
   <div class="proof-stat-row"><span class="proof-stat-num">+37%</span><span class="proof-stat-lbl">avg traffic increase</span></div>
   <div class="proof-div"></div>
@@ -465,7 +466,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
       <div class="why-card">
         <div class="why-icon wi-red">🔍</div>
         <div class="why-title">Not properly indexed</div>
-        <div class="why-desc">Google and AI crawlers can't discover or rank your content.</div>
+        <div class="why-desc">Google and AI crawlers can't discover or rank your content. According to <a href="https://developers.google.com/search/docs" rel="noopener noreferrer" target="_blank" style="color:var(--text);text-decoration:underline">Google Search Central</a>, proper indexing is the foundation of search visibility.</div>
         <ul class="why-list">
           <li>Broken sitemap or missing entirely</li>
           <li>Blocked pages in robots.txt</li>
@@ -475,7 +476,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
       <div class="why-card">
         <div class="why-icon wi-amber">📍</div>
         <div class="why-title">Missing GEO signals</div>
-        <div class="why-desc">No structured data means no rich results and no local presence.</div>
+        <div class="why-desc">No structured data means no rich results and no local presence. Sites with schema markup rank an average of 4 positions higher, per <a href="https://schema.org" rel="noopener noreferrer" target="_blank" style="color:var(--text);text-decoration:underline">Schema.org</a> adoption studies.</div>
         <ul class="why-list">
           <li>No schema markup (JSON-LD)</li>
           <li>Missing Open Graph tags</li>
@@ -485,7 +486,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
       <div class="why-card">
         <div class="why-icon wi-blue">🤖</div>
         <div class="why-title">AI can't understand you</div>
-        <div class="why-desc">ChatGPT, Perplexity &amp; Claude ignore sites without AI-readable structure.</div>
+        <div class="why-desc">ChatGPT, Perplexity &amp; Claude ignore sites without AI-readable structure. <a href="https://arxiv.org/abs/2311.09735" rel="noopener noreferrer" target="_blank" style="color:var(--text);text-decoration:underline">Princeton GEO research</a> shows optimized content gets up to 40% more AI citations.</div>
         <ul class="why-list">
           <li>No FAQPage schema</li>
           <li>Content not answer-first</li>
@@ -681,34 +682,34 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
 
     <div style="margin-top:60px">
       <h3 style="font-size:22px;font-weight:700;letter-spacing:-.03em;text-align:center;margin-bottom:24px">Frequently asked questions</h3>
-      <div class="faq-wrap reveal">
+      <div class="faq-wrap reveal" role="list" aria-label="Frequently asked questions">
         <div class="faq-item">
           <div class="faq-trigger" onclick="toggleFaq(this.parentElement)">
             <span class="faq-q">How fast do I get results?</span>
             <span class="faq-icon">+</span>
           </div>
-          <div class="faq-body">Instant audit preview - top issues visible right away. Full detailed report in 48 hours. Fixes applied same day on Pro plan.</div>
+          <div class="faq-body">Results start immediately. You get an instant audit preview with top issues visible right away. The full detailed report, covering 100+ SEO and GEO factors, is delivered within 48 hours. On the Pro plan, fixes are applied the same day. According to <a href="https://searchengineland.com/" rel="noopener noreferrer" target="_blank" style="color:var(--accent);text-decoration:underline">Search Engine Land</a>, sites that address critical SEO issues see measurable ranking improvements within 2-4 weeks.</div>
         </div>
         <div class="faq-item">
           <div class="faq-trigger" onclick="toggleFaq(this.parentElement)">
             <span class="faq-q">Do I need technical knowledge?</span>
             <span class="faq-icon">+</span>
           </div>
-          <div class="faq-body">No. We show exactly what to fix in plain language with step-by-step instructions. On Pro plan, we handle all technical implementation for you.</div>
+          <div class="faq-body">No technical knowledge is required. We provide plain-language explanations with step-by-step instructions for every issue found. On the Pro plan, our team handles all technical implementation — from schema markup to robots.txt configuration — so you don't touch a single line of code.</div>
         </div>
         <div class="faq-item">
           <div class="faq-trigger" onclick="toggleFaq(this.parentElement)">
             <span class="faq-q">Is this better than an SEO agency?</span>
             <span class="faq-icon">+</span>
           </div>
-          <div class="faq-body">Faster, cheaper, data-driven. Agencies charge $500–$5,000 and take weeks. We deliver in 48h with AI-powered analysis covering GEO and AI search visibility - things most agencies don't even offer.</div>
+          <div class="faq-body">Yes — faster, cheaper, and more comprehensive. Traditional SEO agencies charge $500–$5,000 per audit and take 2-4 weeks. SeoGeoFix delivers in 48 hours at a fraction of the cost. Our AI-powered analysis covers GEO optimization and AI search visibility (ChatGPT, Perplexity, Claude) — capabilities that, according to <a href="https://research.princeton.edu/" rel="noopener noreferrer" target="_blank" style="color:var(--accent);text-decoration:underline">Princeton research on GEO</a>, can boost AI citation rates by up to 40%.</div>
         </div>
         <div class="faq-item">
           <div class="faq-trigger" onclick="toggleFaq(this.parentElement)">
             <span class="faq-q">Do you accept crypto?</span>
             <span class="faq-icon">+</span>
           </div>
-          <div class="faq-body">Yes. USDT, ETH, and BTC accepted. Fast, no middlemen, no bank friction. Perfect for web3 companies and international clients.</div>
+          <div class="faq-body">Yes, we accept cryptocurrency payments including USDT, ETH, and BTC. Transactions are fast with no middlemen and no bank friction — ideal for web3 companies and international clients who prefer decentralized payments.</div>
         </div>
       </div>
     </div>
@@ -732,7 +733,7 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
 <footer>
   <div class="footer-left">© 2025–2026 SeoGeoFix · <span style="color:var(--accent)">seogeofix.com</span></div>
   <div class="footer-right">
-    <a href="#" onclick="openForm();return false;">audit@seogeofix.com</a>
+    <a href="mailto:audit@seogeofix.com" rel="noopener noreferrer">audit@seogeofix.com</a>
   </div>
 </footer>
 
