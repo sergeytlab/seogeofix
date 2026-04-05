@@ -868,27 +868,41 @@ document.addEventListener('mouseup',()=>{co.classList.remove('c');ci.style.trans
 document.addEventListener('mouseleave',()=>{co.style.opacity='0';ci.style.opacity='0'});
 document.addEventListener('mouseenter',()=>{co.style.opacity='1';ci.style.opacity='1'});
 
-// 3D TILT
+// 3D TILT — cached rect + rAF to avoid forced layout
 document.querySelectorAll('.pc,.why-card').forEach(card=>{
+  let rect=null,raf=0;
+  card.addEventListener('mouseenter',()=>{rect=card.getBoundingClientRect()});
   card.addEventListener('mousemove',e=>{
-    const r=card.getBoundingClientRect();
-    const x=e.clientX-r.left,y=e.clientY-r.top;
-    card.style.transform=`perspective(800px) rotateX(${((y-r.height/2)/r.height)*-4}deg) rotateY(${((x-r.width/2)/r.width)*4}deg) translateY(-3px)`;
-  });
+    if(!rect)return;
+    const ex=e.clientX,ey=e.clientY;
+    cancelAnimationFrame(raf);
+    raf=requestAnimationFrame(()=>{
+      const x=ex-rect.left,y=ey-rect.top;
+      card.style.transform='perspective(800px) rotateX('+((y-rect.height/2)/rect.height*-4)+'deg) rotateY('+((x-rect.width/2)/rect.width*4)+'deg) translateY(-3px)';
+    });
+  },{passive:true});
   card.addEventListener('mouseleave',()=>{
+    cancelAnimationFrame(raf);rect=null;
     card.style.transform=card.classList.contains('feat')?'scale(1.03)':'';
   });
 });
-
-// HERO GLOW
-const heroEl=document.querySelector('.hero'),g1=document.querySelector('.hero-glow-1');
-heroEl&&heroEl.addEventListener('mousemove',e=>{
-  const r=heroEl.getBoundingClientRect();
-  g1.style.left=((e.clientX-r.left)/r.width*100-25)+'%';
-  g1.style.top=((e.clientY-r.top)/r.height*100-30)+'%';
-  g1.style.transition='left .5s ease,top .5s ease';
-});
-
+// HERO GLOW — cached rect + transform
+const heroEl=document.querySelector('.hero'),g1el=document.querySelector('.hero-glow-1');
+let heroRect=null,heroRaf=0;
+if(heroEl){
+  heroEl.addEventListener('mouseenter',()=>{heroRect=heroEl.getBoundingClientRect()});
+  heroEl.addEventListener('mousemove',e=>{
+    if(!heroRect)return;
+    const ex=e.clientX,ey=e.clientY;
+    cancelAnimationFrame(heroRaf);
+    heroRaf=requestAnimationFrame(()=>{
+      const px=(ex-heroRect.left)/heroRect.width*100-25;
+      const py=(ey-heroRect.top)/heroRect.height*100-30;
+      g1el.style.transform='translate3d('+px+'%,'+py+'%,0)';
+    });
+  },{passive:true});
+  heroEl.addEventListener('mouseleave',()=>{heroRect=null});
+}
 // BILLING TOGGLE
 let monthly=false;
 function toggleBilling(){
@@ -908,14 +922,13 @@ function toggleFaq(el){
   body.style.display=isOpen?'none':'block';
 }
 
-// MOBILE STICKY — hide when pricing visible
+// MOBILE STICKY — IntersectionObserver (no forced layout)
 const sticky=document.getElementById('sticky');
 const pricingSec=document.getElementById('pricing');
 if(window.innerWidth<=640&&sticky&&pricingSec){
-  window.addEventListener('scroll',()=>{
-    const r=pricingSec.getBoundingClientRect();
-    sticky.style.display=r.top<window.innerHeight&&r.bottom>0?'none':'block';
-  });
+  new IntersectionObserver(entries=>{
+    sticky.style.display=entries[0].isIntersecting?'none':'block';
+  },{threshold:0}).observe(pricingSec);
 }
 </script>
 </body>
