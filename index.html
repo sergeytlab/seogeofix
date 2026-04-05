@@ -747,13 +747,13 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
 
     <div style="padding:24px 28px 0;display:flex;align-items:center;justify-content:space-between">
       <div>
-        <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Free Audit</div>
-        <h3 style="font-size:22px;font-weight:800;letter-spacing:-.03em;line-height:1.1">Get your free<br>audit report</h3>
+        <div id="f-label" style="font-size:11px;font-family:'DM Mono',monospace;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px">Free Audit</div>
+        <h3 id="f-title" style="font-size:22px;font-weight:800;letter-spacing:-.03em;line-height:1.1">Get your free<br>audit report</h3>
       </div>
       <button onclick="closeForm()" style="background:var(--bg3);border:1px solid var(--border);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--text2);font-size:18px;line-height:1;font-weight:300">×</button>
     </div>
 
-    <div style="padding:20px 28px 8px;font-size:13px;color:var(--text2)">We'll scan your site and send a detailed report within 48 hours. No spam, no sales calls.</div>
+    <div id="f-desc" style="padding:20px 28px 8px;font-size:13px;color:var(--text2)">We'll scan your site and send a detailed report within 48 hours. No spam, no sales calls.</div>
 
     <form id="audit-form" onsubmit="submitForm(event)" style="padding:8px 28px 28px;display:flex;flex-direction:column;gap:14px">
 
@@ -788,7 +788,29 @@ footer{border-top:1px solid var(--border);padding:32px 48px;display:flex;align-i
 var selectedPlan='';
 function openForm(plan){
   selectedPlan=plan||'';
-  const m=document.getElementById('form-modal');
+  var label=document.getElementById('f-label');
+  var title=document.getElementById('f-title');
+  var desc=document.getElementById('f-desc');
+  var btn=document.getElementById('f-btn');
+  if(plan==='Growth'){
+    var p=monthly?'$63/mo':'$79';
+    label.textContent='Growth Audit \u00B7 '+p;
+    title.innerHTML='Get your full<br>SEO + GEO report';
+    desc.textContent='Full audit covering 100+ SEO and GEO factors. Delivered within 48 hours.';
+    btn.textContent='Get Full Report \u2192';
+  }else if(plan==='Pro'){
+    var p=monthly?'$199/mo':'$249';
+    label.textContent='Pro Optimization \u00B7 '+p;
+    title.innerHTML='Scale your SEO<br>with full implementation';
+    desc.textContent='Complete audit + our team implements all fixes. For SaaS, agencies & serious growth.';
+    btn.textContent='Scale My SEO \u2192';
+  }else{
+    label.textContent='Free Audit';
+    title.innerHTML='Get your free<br>audit report';
+    desc.textContent="We'll scan your site and send a detailed report within 48 hours. No spam, no sales calls.";
+    btn.textContent='Get My Free Audit Report \u2192';
+  }
+  var m=document.getElementById('form-modal');
   m.style.display='flex';
   document.body.style.overflow='hidden';
   setTimeout(()=>document.getElementById('f-name').focus(),100);
